@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LeCount Tax Prep | Chelsea LeCount</title>
+  <meta name="description" content="Boutique tax and accounting services in Louisiana. Personalized, discreet, high-touch support for individuals and small businesses." />
+  <style>
+    :root { --bg:#fbfaf7; --text:#1f2328; --muted:#5c6570; --accent:#b59b5b; }
+    body { margin:0; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.5; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 72px; }
+    header { padding: 22px 0 10px; }
+    .brand { letter-spacing: .06em; text-transform: uppercase; font-size: 12px; color: var(--muted); }
+    h1 { margin: 10px 0 8px; font-size: clamp(30px, 4vw, 44px); line-height:1.15; }
+    .sub { font-size: 18px; color: var(--muted); max-width: 60ch; }
+    .cta { display:flex; gap:12px; flex-wrap: wrap; margin-top: 18px; }
+    .btn { display:inline-block; padding: 12px 16px; border-radius: 999px; border:1px solid var(--text); text-decoration:none; color: var(--text); }
+    .btn.primary { background: var(--text); color: var(--bg); border-color: var(--text); }
+    .rule { height:1px; background: color-mix(in srgb, var(--muted) 20%, transparent); margin: 28px 0; }
+    .grid { display:grid; gap:18px; grid-template-columns: 1fr; }
+    @media (min-width: 860px){ .grid{ grid-template-columns: 1.1fr .9fr; } }
+    section h2 { font-size: 18px; margin: 0 0 10px; }
+    p { margin: 0 0 12px; }
+    ul { margin: 0; padding-left: 18px; color: var(--muted); }
+    li { margin: 8px 0; }
+    .card { background: white; border: 1px solid color-mix(in srgb, var(--muted) 18%, transparent); border-radius: 18px; padding: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.04); }
+    .badge { display:inline-block; padding: 6px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--text); font-size: 12px; margin-top: 10px; }
+    footer { margin-top: 38px; color: var(--muted); font-size: 14px; }
+    a { color: inherit; }
+    .fine { font-size: 12px; color: var(--muted); margin-top: 14px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">LeCount Tax Prep</div>
+      <h1>Personalized Tax & Accounting Services<br/>Rooted in precision. Built on trust.</h1>
+      <div class="sub">Boutique, high-touch support for individuals and small businesses who value clarity, discretion, and accuracy.</div>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Request a Consultation</a>
+        <a class="btn" href="#services">View Services</a>
+      </div>
+      <div class="badge">Chelsea LeCount • EFIN Holder</div>
+    </header>
+
+    <div class="rule"></div>
+
+    <div class="grid">
+      <section class="card" id="about">
+        <h2>About</h2>
+        <p>Clients work directly with <strong>Chelsea LeCount</strong>, an accounting professional with over eight years of experience in tax preparation, bookkeeping, payroll, and audit support.</p>
+        <p>LeCount Tax Prep is intentionally boutique—no call centers, no outsourcing, and no rotating staff—just careful, confidential work and clear communication.</p>
+      </section>
+
+      <section class="card" id="services">
+        <h2>Services</h2>
+        <ul>
+          <li>Individual tax preparation</li>
+          <li>Small business tax services</li>
+          <li>Bookkeeping & financial reporting</li>
+          <li>Payroll & compliance support</li>
+          <li>1099 & year-end reporting</li>
+          <li>Audit & documentation support</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="rule"></div>
+
+    <section class="card" id="contact">
+      <h2>Contact</h2>
+      <p><strong>Braithwaite, Louisiana</strong></p>
+      <p>Phone: <a href="tel:+15044935562">504-493-5562</a><br/>
+         Email: <a href="mailto:Chelsea@LeCountTaxPrep.com">Chelsea@LeCountTaxPrep.com</a></p>
+      <p class="fine"><strong>Confidentiality Notice:</strong> This email may contain privileged tax information intended only for the recipient.</p>
+    </section>
+
+    <footer>
+      © <span id="y"></span> LeCount Tax Prep. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
