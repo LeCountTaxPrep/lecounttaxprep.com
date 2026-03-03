@@ -4,84 +4,345 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>LeCount Tax Prep | Chelsea LeCount</title>
-  <meta name="description" content="Boutique tax and accounting services in Louisiana. Personalized, discreet, high-touch support for individuals and small businesses." />
+  <meta name="description" content="Boutique tax and accounting services. High-touch, discreet support for individuals and small businesses." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    :root { --bg:#fbfaf7; --text:#1f2328; --muted:#5c6570; --accent:#b59b5b; }
-    body { margin:0; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.5; }
-    .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 72px; }
-    header { padding: 22px 0 10px; }
-    .brand { letter-spacing: .06em; text-transform: uppercase; font-size: 12px; color: var(--muted); }
-    h1 { margin: 10px 0 8px; font-size: clamp(30px, 4vw, 44px); line-height:1.15; }
-    .sub { font-size: 18px; color: var(--muted); max-width: 60ch; }
-    .cta { display:flex; gap:12px; flex-wrap: wrap; margin-top: 18px; }
-    .btn { display:inline-block; padding: 12px 16px; border-radius: 999px; border:1px solid var(--text); text-decoration:none; color: var(--text); }
-    .btn.primary { background: var(--text); color: var(--bg); border-color: var(--text); }
-    .rule { height:1px; background: color-mix(in srgb, var(--muted) 20%, transparent); margin: 28px 0; }
-    .grid { display:grid; gap:18px; grid-template-columns: 1fr; }
-    @media (min-width: 860px){ .grid{ grid-template-columns: 1.1fr .9fr; } }
-    section h2 { font-size: 18px; margin: 0 0 10px; }
-    p { margin: 0 0 12px; }
-    ul { margin: 0; padding-left: 18px; color: var(--muted); }
-    li { margin: 8px 0; }
-    .card { background: white; border: 1px solid color-mix(in srgb, var(--muted) 18%, transparent); border-radius: 18px; padding: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.04); }
-    .badge { display:inline-block; padding: 6px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--text); font-size: 12px; margin-top: 10px; }
-    footer { margin-top: 38px; color: var(--muted); font-size: 14px; }
-    a { color: inherit; }
-    .fine { font-size: 12px; color: var(--muted); margin-top: 14px; }
+    :root{
+      --bg:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --line:rgba(15,23,42,.12);
+      --btn:#0b0f19;          /* dark button like your example */
+      --btnText:#ffffff;
+      --accent:#10b981;       /* green CTA like screenshot (adjust if you want) */
+      --accentText:#053b2b;
+      --max:1200px;
+      --radius:18px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 22px}
+    .topbar{
+      position:sticky; top:0; z-index:20;
+      background:rgba(255,255,255,.9);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      height:76px;
+      gap:18px;
+    }
+
+    /* Logo area */
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width: 240px;
+    }
+    .mark{
+      width:34px; height:34px; border:2px solid var(--text);
+      border-radius:8px;
+      position:relative;
+    }
+    .mark:after{
+      content:"";
+      position:absolute; inset:7px;
+      border:2px solid var(--text);
+      border-radius:6px;
+      opacity:.35;
+    }
+    .brandtext{
+      display:flex; flex-direction:column; line-height:1.1;
+      font-family: Montserrat, Inter, sans-serif;
+    }
+    .brandtext strong{font-weight:800; letter-spacing:.02em}
+    .brandtext span{
+      font-size:12px; color:var(--muted);
+      letter-spacing:.18em; text-transform:uppercase;
+      margin-top:4px;
+    }
+
+    /* Nav links */
+    .links{
+      display:flex; align-items:center; gap:28px;
+      font-family: Montserrat, Inter, sans-serif;
+      font-weight:600;
+      letter-spacing:.02em;
+      color:#111827;
+    }
+    .links a{opacity:.88}
+    .links a:hover{opacity:1}
+
+    .navcta{
+      display:flex; align-items:center; gap:10px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 16px;
+      border-radius:12px;
+      font-weight:700;
+      font-family: Montserrat, Inter, sans-serif;
+      border:1px solid rgba(0,0,0,.08);
+      transition: transform .08s ease, opacity .15s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .btn.dark{background:var(--btn); color:var(--btnText); border-color:rgba(0,0,0,.0)}
+    .btn.accent{background:var(--accent); color:#ffffff; border-color:rgba(0,0,0,.0)}
+    .btn.ghost{background:transparent}
+
+    /* HERO */
+    .hero{
+      padding:44px 0 0;
+    }
+    .heroCard{
+      border-radius:var(--radius);
+      overflow:hidden;
+      position:relative;
+      min-height: 520px;
+      box-shadow: 0 22px 60px rgba(0,0,0,.10);
+      border:1px solid rgba(0,0,0,.06);
+    }
+    .heroImg{
+      position:absolute; inset:0;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.70) 0%, rgba(0,0,0,.35) 55%, rgba(0,0,0,.18) 100%),
+        url("https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=2400&q=80");
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.02);
+    }
+    .heroInner{
+      position:relative;
+      padding: clamp(26px, 4vw, 54px);
+      max-width: 720px;
+      color:#ffffff;
+    }
+    .heroKicker{
+      font-family: Montserrat, Inter, sans-serif;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-size:12px;
+      opacity:.88;
+      margin-bottom:14px;
+    }
+    h1{
+      margin:0 0 12px;
+      font-family: Montserrat, Inter, sans-serif;
+      font-weight:800;
+      letter-spacing:.01em;
+      line-height:1.05;
+      font-size: clamp(34px, 4.2vw, 56px);
+      text-transform:uppercase;   /* matches screenshot vibe */
+    }
+    .heroSub{
+      margin:0 0 22px;
+      font-size: 18px;
+      max-width: 52ch;
+      opacity:.92;
+    }
+    .heroActions{
+      display:flex; gap:12px; flex-wrap:wrap;
+    }
+    .heroActions .btn{border-radius:10px; padding:12px 18px}
+    .heroNote{
+      margin-top:18px;
+      font-size:13px;
+      opacity:.82;
+    }
+
+    /* Sections */
+    .section{
+      padding:54px 0;
+    }
+    .sectionTitle{
+      font-family: Montserrat, Inter, sans-serif;
+      font-weight:800;
+      letter-spacing:.02em;
+      margin:0 0 10px;
+      font-size: 26px;
+    }
+    .sectionLead{
+      margin:0 0 22px;
+      color:var(--muted);
+      max-width: 70ch;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:16px;
+    }
+    @media (min-width: 900px){
+      .grid{grid-template-columns: repeat(3, 1fr);}
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+      background:#fff;
+    }
+    .card h3{
+      margin:0 0 8px;
+      font-family: Montserrat, Inter, sans-serif;
+      font-weight:800;
+      font-size:16px;
+    }
+    .card p{margin:0; color:var(--muted)}
+    .footer{
+      border-top:1px solid var(--line);
+      padding:22px 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* Mobile nav: collapse links */
+    @media (max-width: 860px){
+      .links{display:none;}
+      .brand{min-width:auto;}
+    }
   </style>
 </head>
+
 <body>
+
+<header class="topbar">
   <div class="wrap">
-    <header>
-      <div class="brand">LeCount Tax Prep</div>
-      <h1>Personalized Tax & Accounting Services<br/>Rooted in precision. Built on trust.</h1>
-      <div class="sub">Boutique, high-touch support for individuals and small businesses who value clarity, discretion, and accuracy.</div>
-      <div class="cta">
-        <a class="btn primary" href="#contact">Request a Consultation</a>
-        <a class="btn" href="#services">View Services</a>
+    <div class="nav">
+      <a class="brand" href="#top" aria-label="LeCount Tax Prep Home">
+        <div class="mark" aria-hidden="true"></div>
+        <div class="brandtext">
+          <strong>LECOUNT TAX PREP</strong>
+          <span>BOUTIQUE TAX & ACCOUNTING</span>
+        </div>
+      </a>
+
+      <nav class="links" aria-label="Primary">
+        <a href="#home">HOME</a>
+        <a href="#services">SERVICES</a>
+        <a href="#pricing">PRICING</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+
+      <div class="navcta">
+        <a class="btn dark" href="#contact">Get Started</a>
       </div>
-      <div class="badge">Chelsea LeCount • EFIN Holder</div>
-    </header>
-
-    <div class="rule"></div>
-
-    <div class="grid">
-      <section class="card" id="about">
-        <h2>About</h2>
-        <p>Clients work directly with <strong>Chelsea LeCount</strong>, an accounting professional with over eight years of experience in tax preparation, bookkeeping, payroll, and audit support.</p>
-        <p>LeCount Tax Prep is intentionally boutique—no call centers, no outsourcing, and no rotating staff—just careful, confidential work and clear communication.</p>
-      </section>
-
-      <section class="card" id="services">
-        <h2>Services</h2>
-        <ul>
-          <li>Individual tax preparation</li>
-          <li>Small business tax services</li>
-          <li>Bookkeeping & financial reporting</li>
-          <li>Payroll & compliance support</li>
-          <li>1099 & year-end reporting</li>
-          <li>Audit & documentation support</li>
-        </ul>
-      </section>
     </div>
-
-    <div class="rule"></div>
-
-    <section class="card" id="contact">
-      <h2>Contact</h2>
-      <p><strong>Braithwaite, Louisiana</strong></p>
-      <p>Phone: <a href="tel:+15044935562">504-493-5562</a><br/>
-         Email: <a href="mailto:Chelsea@LeCountTaxPrep.com">Chelsea@LeCountTaxPrep.com</a></p>
-      <p class="fine"><strong>Confidentiality Notice:</strong> This email may contain privileged tax information intended only for the recipient.</p>
-    </section>
-
-    <footer>
-      © <span id="y"></span> LeCount Tax Prep. All rights reserved.
-    </footer>
   </div>
+</header>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+<main id="top">
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="heroCard">
+        <div class="heroImg" role="img" aria-label="Professional meeting"></div>
+
+        <div class="heroInner">
+          <div class="heroKicker">Braithwaite, Louisiana • Direct access • Discreet service</div>
+
+          <h1>
+            We handle your taxes<br />
+            so you don’t have to
+          </h1>
+
+          <p class="heroSub">
+            Boutique, high-touch support for individuals and small businesses—handled personally, with clarity and precision.
+          </p>
+
+          <div class="heroActions">
+            <a class="btn accent" href="#services">Learn more</a>
+            <a class="btn ghost" style="border-color: rgba(255,255,255,.35); color:#fff;" href="#contact">Request a consultation</a>
+          </div>
+
+          <div class="heroNote">
+            Chelsea LeCount • EFIN Holder • 8+ years experience
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <h2 class="sectionTitle">Services</h2>
+      <p class="sectionLead">
+        A focused set of services designed for clients who want accuracy, organization, and a trusted relationship—not a rushed, volume approach.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Individual Tax Preparation</h3>
+          <p>Careful filing, clean documentation, and clear communication—handled directly.</p>
+        </div>
+        <div class="card">
+          <h3>Small Business Tax Services</h3>
+          <p>Support for business owners who value consistency, compliance, and strategy.</p>
+        </div>
+        <div class="card">
+          <h3>Bookkeeping & Payroll</h3>
+          <p>Structured monthly support to keep your numbers clean and your year-end easy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pricing">
+    <div class="wrap">
+      <h2 class="sectionTitle">Pricing</h2>
+      <p class="sectionLead">
+        Because every situation is different, pricing is based on complexity and scope. Most clients start with a brief consultation.
+      </p>
+      <div class="card">
+        <h3>How it works</h3>
+        <p>
+          1) Request a consultation → 2) Quick scope review → 3) Clear quote before work begins.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <h2 class="sectionTitle">Contact</h2>
+      <p class="sectionLead">Reach out to request a consultation or ask a question.</p>
+
+      <div class="grid" style="grid-template-columns: 1fr; max-width: 760px;">
+        <div class="card">
+          <h3>LeCount Tax Prep</h3>
+          <p>
+            Braithwaite, Louisiana<br />
+            Phone: <a class="underline" href="tel:+15044935562">504-493-5562</a><br />
+            Email: <a class="underline" href="mailto:Chelsea@LeCountTaxPrep.com">Chelsea@LeCountTaxPrep.com</a>
+          </p>
+          <p style="margin-top:12px; color:var(--muted); font-size:12px;">
+            <strong>Confidentiality Notice:</strong> This email may contain privileged tax information intended only for the recipient.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      © <span id="y"></span> LeCount Tax Prep • All rights reserved
+    </div>
+  </footer>
+</main>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
