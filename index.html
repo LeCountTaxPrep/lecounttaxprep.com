@@ -179,14 +179,18 @@
       color:var(--muted);
       max-width: 70ch;
     }
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:16px;
+    .grid {
+    display: grid;
+    grid-template-columns: minmax(0, 375px);
+    justify-content: center;
+    gap: 16px;
+}
+
+@media (min-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 375px));
     }
-    @media (min-width: 900px){
-      .grid{grid-template-columns: repeat(3, 1fr);}
-    }
+}
     .card{
       border:1px solid var(--line);
       border-radius:16px;
