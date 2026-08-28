@@ -328,6 +328,10 @@
       text-transform:uppercase;
     }
 
+    .mobileOwnerEyebrow{
+      display:none;
+    }
+
     .ownerCopy h2{
       margin:0 0 16px;
       color:var(--navy);
@@ -613,6 +617,15 @@
 
     @media (max-width:860px){
 
+      .mobileOwnerEyebrow{
+        display:block;
+        margin-bottom:-8px;
+      }
+
+      .desktopOwnerEyebrow{
+        display:none;
+      }
+
       .nav{
         display:flex;
         justify-content:space-between;
@@ -836,6 +849,11 @@
       <div class="ownerGrid">
 
 
+        <div class="ownerEyebrow mobileOwnerEyebrow">
+          Meet the Owner
+        </div>
+
+
         <div class="ownerFrame">
 
           <img
@@ -849,7 +867,7 @@
 
         <div class="ownerCopy">
 
-          <div class="ownerEyebrow">
+          <div class="ownerEyebrow desktopOwnerEyebrow">
             Meet the Owner
           </div>
 
