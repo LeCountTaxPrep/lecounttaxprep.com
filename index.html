@@ -318,18 +318,49 @@
       border:1px solid rgba(16,42,67,.18);
     }
 
-    .ownerEyebrow{
-      margin-bottom:8px;
+    .ownerPhotoLabel{
+      position:absolute;
+      left:14px;
+      bottom:14px;
+      z-index:3;
+
+      display:flex;
+      align-items:center;
+      gap:13px;
+
+      width:78%;
+      min-height:72px;
+      padding:16px 22px;
+
+      background:linear-gradient(
+        90deg,
+        rgba(255,255,255,.99) 0%,
+        rgba(255,255,255,.97) 50%,
+        rgba(255,255,255,.82) 72%,
+        rgba(255,255,255,.38) 88%,
+        rgba(255,255,255,0) 100%
+      );
+
+      color:var(--navy);
       font-family:Montserrat,Inter,sans-serif;
-      color:#45698e;
-      font-size:12px;
+      font-size:13px;
       font-weight:800;
-      letter-spacing:.15em;
+      letter-spacing:.14em;
+      line-height:1;
       text-transform:uppercase;
+      white-space:nowrap;
+
+      border-radius:0 14px 0 14px;
+      pointer-events:none;
     }
 
-    .mobileOwnerEyebrow{
-      display:none;
+    .ownerPhotoLabelLine{
+      display:block;
+      flex:0 0 3px;
+      width:3px;
+      height:36px;
+      border-radius:999px;
+      background:var(--navy);
     }
 
     .ownerCopy h2{
@@ -621,23 +652,26 @@
         padding-top:38px;
       }
 
-      .mobileOwnerEyebrow{
-        display:inline-flex;
-        width:max-content;
-        position:relative;
-        z-index:3;
-        margin:0 0 -15px 18px;
-        padding:7px 12px;
-        background:#f6f8fb;
-        border:1px solid rgba(16,42,67,.18);
-        border-radius:999px;
-        color:var(--navy);
-        font-size:11px;
-        letter-spacing:.14em;
+      .ownerPhotoLabel{
+        width:80%;
+        min-height:64px;
+        padding:14px 18px;
+        gap:11px;
+        font-size:12px;
+        letter-spacing:.12em;
+
+        background:linear-gradient(
+          90deg,
+          rgba(255,255,255,.99) 0%,
+          rgba(255,255,255,.97) 54%,
+          rgba(255,255,255,.80) 74%,
+          rgba(255,255,255,.34) 90%,
+          rgba(255,255,255,0) 100%
+        );
       }
 
-      .desktopOwnerEyebrow{
-        display:none;
+      .ownerPhotoLabelLine{
+        height:32px;
       }
 
       .nav{
@@ -663,8 +697,9 @@
       }
 
       .ownerFrame{
+        width:100%;
         max-width:430px;
-        margin-top:0;
+        margin:0 auto;
       }
 
       .ownerCopy h2{
@@ -868,11 +903,6 @@
       <div class="ownerGrid">
 
 
-        <div class="ownerEyebrow mobileOwnerEyebrow">
-          Meet the Owner
-        </div>
-
-
         <div class="ownerFrame">
 
           <img
@@ -881,14 +911,15 @@
             alt="Chelsea LeCount, owner of LeCount Tax Prep"
           >
 
+          <div class="ownerPhotoLabel" aria-hidden="true">
+            <span class="ownerPhotoLabelLine"></span>
+            <span>Meet the Owner</span>
+          </div>
+
         </div>
 
 
         <div class="ownerCopy">
-
-          <div class="ownerEyebrow desktopOwnerEyebrow">
-            Meet the Owner
-          </div>
 
           <h2>
             Hi, I’m Chelsea LeCount.
