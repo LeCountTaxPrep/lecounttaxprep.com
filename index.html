@@ -3,207 +3,579 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LeCount Tax Prep | Chelsea LeCount</title>
-  <meta name="description" content="Tax and accounting services. High-touch, discreet support for individuals and small businesses." />
+
+  <title>LeCount Tax Prep | Small Business Accounting & Systems</title>
+
+  <meta
+    name="description"
+    content="Bookkeeping, payroll, sales tax, cleanup, tax preparation, and practical back-office support for small businesses."
+  />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
+
     :root{
       --bg:#ffffff;
-      --text:#0f172a;
-      --muted:#475569;
-      --line:rgba(15,23,42,.12);
-      --btn:#0b0f19;          /* dark button like your example */
-      --btnText:#ffffff;
-      --accent:#10b981;       /* green CTA like screenshot (adjust if you want) */
-      --accentText:#053b2b;
-      --max:1200px;
-      --radius:18px;
+      --soft:#f6f8fb;
+      --navy:#102a43;
+      --navy2:#173b61;
+      --navy3:#24527f;
+      --text:#172236;
+      --muted:#5f6f82;
+      --line:rgba(16,42,67,.14);
+      --max:1180px;
+      --radius:16px;
     }
 
-    *{box-sizing:border-box}
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       margin:0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--text);
       background:var(--bg);
       line-height:1.55;
     }
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 22px}
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 22px;
+    }
+
+
+    /* HEADER */
+
     .topbar{
-      position:sticky; top:0; z-index:20;
-      background:rgba(255,255,255,.9);
-      backdrop-filter: blur(10px);
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(10px);
+      border-top:4px solid var(--navy);
       border-bottom:1px solid var(--line);
     }
+
     .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      height:76px;
-      gap:18px;
+      min-height:82px;
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      align-items:center;
+      gap:34px;
     }
 
-    /* Logo area */
-    .brand{
-      display:flex; align-items:center; gap:12px;
-      min-width: 240px;
-    }
-    .mark{
-      width:34px; height:34px; border:2px solid var(--text);
-      border-radius:8px;
-      position:relative;
-    }
-    .mark:after{
-      content:"";
-      position:absolute; inset:7px;
-      border:2px solid var(--text);
-      border-radius:6px;
-      opacity:.35;
-    }
     .brandtext{
-      display:flex; flex-direction:column; line-height:1.1;
-      font-family: Montserrat, Inter, sans-serif;
-    }
-    .brandtext strong{font-weight:800; letter-spacing:.02em}
-    .brandtext span{
-      font-size:12px; color:var(--muted);
-      letter-spacing:.18em; text-transform:uppercase;
-      margin-top:4px;
+      display:flex;
+      flex-direction:column;
+      line-height:1;
+      font-family:Montserrat,Inter,sans-serif;
     }
 
-    /* Nav links */
-    .links{
-      display:flex; align-items:center; gap:28px;
-      font-family: Montserrat, Inter, sans-serif;
-      font-weight:600;
-      letter-spacing:.02em;
-      color:#111827;
-    }
-    .links a{opacity:.88}
-    .links a:hover{opacity:1}
-
-    .navcta{
-      display:flex; align-items:center; gap:10px;
-    }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 16px;
-      border-radius:12px;
-      font-weight:700;
-      font-family: Montserrat, Inter, sans-serif;
-      border:1px solid rgba(0,0,0,.08);
-      transition: transform .08s ease, opacity .15s ease;
+    .brandtext strong{
+      color:var(--navy);
+      font-weight:800;
+      font-size:30px;
+      letter-spacing:-.02em;
       white-space:nowrap;
     }
-    .btn:hover{transform: translateY(-1px)}
-    .btn.dark{background:var(--btn); color:var(--btnText); border-color:rgba(0,0,0,.0)}
-    .btn.accent{background:var(--accent); color:#ffffff; border-color:rgba(0,0,0,.0)}
-    .btn.ghost{background:transparent}
+
+    .brandtext span{
+      margin-top:7px;
+      font-size:10px;
+      color:#6b7c91;
+      letter-spacing:.17em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    .links{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:22px;
+      font-family:Montserrat,Inter,sans-serif;
+      font-weight:600;
+      font-size:14px;
+      color:#263448;
+    }
+
+    .links a{
+      white-space:nowrap;
+      opacity:.9;
+    }
+
+    .links a:hover{
+      color:var(--navy);
+      opacity:1;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:10px;
+      font-family:Montserrat,Inter,sans-serif;
+      font-weight:800;
+      border:1px solid transparent;
+      transition:transform .1s ease, opacity .15s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+    }
+
+    .btn.dark{
+      background:var(--navy);
+      color:#fff;
+    }
+
+    .btn.outline{
+      background:transparent;
+      color:#fff;
+      border-color:rgba(255,255,255,.55);
+    }
+
+    .navcta .btn{
+      padding:14px 20px;
+      font-size:14px;
+    }
+
 
     /* HERO */
+
     .hero{
-      padding:44px 0 0;
-    }
-    .heroCard{
-      border-radius:var(--radius);
-      overflow:hidden;
-      position:relative;
-      min-height: 520px;
-      box-shadow: 0 22px 60px rgba(0,0,0,.10);
-      border:1px solid rgba(0,0,0,.06);
-    }
-    .heroImg{
-      position:absolute; inset:0;
-      background:
-        linear-gradient(90deg, rgba(0,0,0,.70) 0%, rgba(0,0,0,.35) 55%, rgba(0,0,0,.18) 100%),
-        url("https://images.unsplash.com/photo-1554224155-1696413565d3");
-      background-size: cover;
-      background-position: center;
-      transform: scale(1.02);
-    }
-    .heroInner{
-      position:relative;
-      padding: clamp(26px, 4vw, 54px);
-      max-width: 720px;
-      color:#ffffff;
-    }
-    .heroKicker{
-      font-family: Montserrat, Inter, sans-serif;
-      letter-spacing:.18em;
-      text-transform:uppercase;
-      font-size:12px;
-      opacity:.88;
-      margin-bottom:14px;
-    }
-    h1{
-      margin:0 0 12px;
-      font-family: Montserrat, Inter, sans-serif;
-      font-weight:800;
-      letter-spacing:.01em;
-      line-height:1.05;
-      font-size: clamp(34px, 4.2vw, 56px);
-      text-transform:uppercase;   /* matches screenshot vibe */
-    }
-    .heroSub{
-      margin:0 0 22px;
-      font-size: 18px;
-      max-width: 52ch;
-      opacity:.92;
-    }
-    .heroActions{
-      display:flex; gap:12px; flex-wrap:wrap;
-    }
-    .heroActions .btn{border-radius:10px; padding:12px 18px}
-    .heroNote{
-      margin-top:18px;
-      font-size:13px;
-      opacity:.82;
+      padding:28px 0 0;
     }
 
-    /* Sections */
+    .heroCard{
+      position:relative;
+      min-height:320px;
+      border-radius:var(--radius);
+      overflow:hidden;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(10,32,52,.94) 0%,
+          rgba(16,42,67,.84) 48%,
+          rgba(16,42,67,.48) 100%
+        ),
+        url("assets/chess-hero.png");
+
+      background-size:115% auto;
+      background-position:center 24%;
+
+      box-shadow:0 16px 40px rgba(16,42,67,.12);
+    }
+
+    .heroInner{
+      position:relative;
+      z-index:1;
+      min-height:320px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      max-width:720px;
+      padding:44px 50px;
+      color:#fff;
+    }
+
+    h1{
+      margin:0 0 16px;
+      font-family:Montserrat,Inter,sans-serif;
+      font-weight:600;
+      letter-spacing:-.02em;
+      line-height:1.05;
+      font-size:clamp(40px,4.8vw,64px);
+      max-width:680px;
+    }
+
+    .heroSub{
+      margin:0 0 24px;
+      max-width:50ch;
+      font-size:17px;
+      color:rgba(255,255,255,.9);
+    }
+
+    .heroActions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .heroActions .btn{
+      min-height:44px;
+      padding:10px 16px;
+      font-size:14px;
+    }
+
+
+    /* GENERAL SECTIONS */
+
     .section{
       padding:54px 0;
     }
-    .sectionTitle{
-      font-family: Montserrat, Inter, sans-serif;
-      font-weight:800;
-      letter-spacing:.02em;
-      margin:0 0 10px;
-      font-size: 26px;
-    }
-    .sectionLead{
-      margin:0 0 22px;
-      color:var(--muted);
-      max-width: 70ch;
-    }
-    .grid {
-    display: grid;
-    grid-template-columns: minmax(0, 375px);
-    justify-content: center;
-    gap: 16px;
-}
 
-@media (min-width: 900px) {
-    .grid {
-        grid-template-columns: repeat(3, minmax(0, 375px));
+    .section.soft{
+      background:var(--soft);
     }
-}
+
+    .sectionTitle{
+      margin:0 0 20px;
+      font-family:Montserrat,Inter,sans-serif;
+      font-weight:800;
+      color:var(--navy);
+      font-size:30px;
+      letter-spacing:-.01em;
+    }
+
+    .sectionLead{
+      margin:0 0 24px;
+      color:var(--muted);
+      max-width:70ch;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:16px;
+    }
+
     .card{
       border:1px solid var(--line);
       border-radius:16px;
-      padding:18px;
+      padding:22px;
       background:#fff;
+      box-shadow:0 8px 24px rgba(16,42,67,.04);
     }
+
     .card h3{
-      margin:0 0 8px;
-      font-family: Montserrat, Inter, sans-serif;
+      margin:0 0 10px;
+      font-family:Montserrat,Inter,sans-serif;
       font-weight:800;
+      color:var(--navy);
       font-size:16px;
     }
-    .card p{margin:0; color:var(--muted)}
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+    }
+
+
+    /* OWNER */
+
+    .ownerGrid{
+      display:grid;
+      grid-template-columns:minmax(260px,390px) minmax(0,1fr);
+      gap:48px;
+      align-items:center;
+    }
+
+    .ownerFrame{
+      position:relative;
+      padding:14px;
+      border:3px solid var(--navy);
+      border-radius:22px;
+      background:#fff;
+      box-shadow:0 22px 50px rgba(16,42,67,.16);
+    }
+
+    .ownerFrame:before{
+      content:"";
+      position:absolute;
+      inset:7px;
+      border:1px solid rgba(16,42,67,.18);
+      border-radius:16px;
+      pointer-events:none;
+    }
+
+    .ownerPhoto{
+      display:block;
+      width:100%;
+      aspect-ratio:4/5;
+      object-fit:cover;
+      object-position:center;
+      border-radius:14px;
+      border:1px solid rgba(16,42,67,.18);
+    }
+
+    .ownerEyebrow{
+      margin-bottom:8px;
+      font-family:Montserrat,Inter,sans-serif;
+      color:#45698e;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+    }
+
+    .ownerCopy h2{
+      margin:0 0 16px;
+      color:var(--navy);
+      font-family:Montserrat,Inter,sans-serif;
+      font-size:clamp(30px,4vw,46px);
+      line-height:1.08;
+    }
+
+    .ownerCopy p{
+      margin:0 0 16px;
+      color:var(--muted);
+      font-size:17px;
+    }
+
+    .ownerSignature{
+      margin-top:22px;
+      font-family:Montserrat,Inter,sans-serif;
+      font-weight:800;
+      color:var(--navy);
+    }
+
+
+    /* PRICING + CONTACT */
+
+    #pricing{
+      padding-bottom:72px;
+      border-bottom:1px solid rgba(16,42,67,.10);
+      background:#fff;
+    }
+
+    .splitSection{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:18px;
+      max-width:900px;
+      margin:0 auto;
+    }
+
+    .splitPanel{
+      position:relative;
+      overflow:hidden;
+      border-radius:18px;
+      padding:24px 28px;
+      border:1px solid var(--line);
+      box-shadow:0 10px 28px rgba(16,42,67,.05);
+      min-height:220px;
+    }
+
+    .splitPanel.light{
+      background:
+        linear-gradient(
+          0deg,
+          rgba(255,255,255,.96),
+          rgba(255,255,255,.96)
+        ),
+        url("assets/chess-pricing.png");
+
+      background-size:cover;
+      background-position:center;
+    }
+
+    .splitPanel.dark{
+      background:
+        linear-gradient(
+          90deg,
+          rgba(16,42,67,.97) 0%,
+          rgba(16,42,67,.94) 55%,
+          rgba(16,42,67,.84) 100%
+        ),
+        url("assets/chess-contact.png");
+
+      background-size:cover;
+      background-position:center;
+
+      color:#fff;
+      border-color:var(--navy);
+    }
+
+    .splitPanel h2{
+      margin:0 0 12px;
+      font-family:Montserrat,Inter,sans-serif;
+      font-size:28px;
+      color:var(--navy);
+      position:relative;
+      z-index:1;
+    }
+
+    .splitPanel.dark h2{
+      color:#fff;
+    }
+
+    .splitPanel p{
+      margin:0 0 10px;
+      color:var(--muted);
+      position:relative;
+      z-index:1;
+      max-width:36rem;
+    }
+
+    .splitPanel.dark p{
+      color:rgba(255,255,255,.88);
+    }
+
+    .contactBlock{
+      margin-top:8px;
+      line-height:1.7;
+      position:relative;
+      z-index:1;
+      max-width:30rem;
+    }
+
+    .contactBlock a{
+      text-decoration:underline;
+      text-underline-offset:2px;
+    }
+
+
+    /* FORMS & RESOURCES */
+
+    #employee-resources{
+      padding-top:72px;
+      background:#f6f8fb;
+    }
+
+    .resourceGrid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:16px;
+    }
+
+    .resourceGrid .card{
+      display:flex;
+      flex-direction:column;
+      min-width:0;
+    }
+
+    .resourceGrid .card p:first-of-type{
+      flex:1;
+    }
+
+    .resourceBtn{
+      width:100%;
+      min-height:54px;
+      padding:13px 14px;
+      white-space:normal;
+      text-align:center;
+      line-height:1.25;
+      font-size:14px;
+      margin-top:16px;
+    }
+
+
+    /* SISTER COMPANY */
+
+    .sisterCard{
+      position:relative;
+      overflow:hidden;
+      border-radius:20px;
+      padding:clamp(28px,4vw,42px);
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(10,32,52,.93) 0%,
+          rgba(16,42,67,.86) 48%,
+          rgba(16,42,67,.58) 100%
+        ),
+        url("https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&fm=jpg&q=85&w=2200");
+
+      background-size:cover;
+      background-position:center 42%;
+
+      box-shadow:0 18px 42px rgba(16,42,67,.14);
+      color:#fff;
+    }
+
+    .sisterCard:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,.03),
+          rgba(255,255,255,0) 45%
+        );
+      pointer-events:none;
+    }
+
+    .sisterCard > *{
+      position:relative;
+      z-index:1;
+    }
+
+    .sisterBadge{
+      display:inline-block;
+      margin-bottom:14px;
+      padding:6px 10px;
+      border:1px solid rgba(255,255,255,.35);
+      border-radius:999px;
+      font-family:Montserrat,Inter,sans-serif;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+
+    .sisterCard h2{
+      margin:0 0 12px;
+      font-family:Montserrat,Inter,sans-serif;
+      font-size:clamp(28px,4vw,42px);
+    }
+
+    .sisterCard p{
+      margin:0 0 18px;
+      max-width:72ch;
+      color:rgba(255,255,255,.88);
+    }
+
+    .servicePills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+      margin:20px 0 22px;
+    }
+
+    .servicePills span{
+      padding:7px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.20);
+      font-size:13px;
+      font-weight:600;
+    }
+
+    .sisterLink{
+      display:inline-flex;
+      padding:13px 18px;
+      border-radius:10px;
+      background:#fff;
+      color:var(--navy);
+      font-family:Montserrat,Inter,sans-serif;
+      font-weight:800;
+    }
+
+
+    /* FOOTER */
+
     .footer{
       border-top:1px solid var(--line);
       padding:22px 0;
@@ -211,223 +583,644 @@
       font-size:13px;
     }
 
-    /* Mobile nav: collapse links */
-    @media (max-width: 860px){
-      .links{display:none;}
-      .brand{min-width:auto;}
+
+    /* RESPONSIVE */
+
+    @media (max-width:1080px){
+
+      .nav{
+        gap:20px;
+      }
+
+      .brandtext strong{
+        font-size:25px;
+      }
+
+      .links{
+        gap:13px;
+        font-size:11px;
+      }
+
+      .navcta .btn{
+        padding:12px 15px;
+        font-size:12px;
+      }
+
+      .resourceGrid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
     }
+
+    @media (max-width:860px){
+
+      .nav{
+        display:flex;
+        justify-content:space-between;
+      }
+
+      .links{
+        display:none;
+      }
+
+      .brandtext strong{
+        font-size:24px;
+      }
+
+      .grid{
+        grid-template-columns:1fr;
+      }
+
+      .ownerGrid{
+        grid-template-columns:1fr;
+        gap:28px;
+      }
+
+      .ownerFrame{
+        max-width:430px;
+      }
+
+      .resourceGrid{
+        grid-template-columns:1fr;
+      }
+
+      .heroInner{
+        padding:36px 28px;
+      }
+
+      .heroActions .btn{
+        width:auto;
+      }
+
+      .splitPanel{
+        padding:22px;
+      }
+    }
+
   </style>
 </head>
+
 
 <body>
 
 <header class="topbar">
+
   <div class="wrap">
+
     <div class="nav">
-      <a class="brand" href="#top" aria-label="LeCount Tax Prep Home">
+
+      <a href="#top" aria-label="LeCount Tax Prep Home">
+
         <div class="brandtext">
+
           <strong>LECOUNT TAX PREP</strong>
-          <span>BOUTIQUE TAX & ACCOUNTING</span>
+
+          <span>
+            BOUTIQUE TAX &amp; ACCOUNTING
+          </span>
+
         </div>
+
       </a>
 
+
       <nav class="links" aria-label="Primary">
+
         <a href="#home">HOME</a>
+
         <a href="#services">SERVICES</a>
+
+        <a href="#owner">ABOUT</a>
+
         <a href="#pricing">PRICING</a>
+
         <a href="#contact">CONTACT</a>
-       <a href="#employee-resources">FORMS & RESOURCES</a>
+
+        <a href="#employee-resources">
+          FORMS &amp; RESOURCES
+        </a>
+
       </nav>
 
+
       <div class="navcta">
-        <a class="btn dark" href="#contact">Get Started</a>
+
+        <a
+          class="btn dark"
+          href="#contact"
+        >
+          Get Started
+        </a>
+
       </div>
+
     </div>
+
   </div>
+
 </header>
 
+
 <main id="top">
+
+
+  <!-- HERO -->
+
   <section class="hero" id="home">
+
     <div class="wrap">
+
       <div class="heroCard">
-        <div class="heroImg" role="img" aria-label="Professional meeting"></div>
 
         <div class="heroInner">
-          <div class="heroKicker">New Orleans, Louisiana • Direct access • Discreet service</div>
 
           <h1>
-            We handle your taxes<br />
-            so you don’t have to
+            Accounting Support for Small Businesses.
           </h1>
 
           <p class="heroSub">
-            Boutique, high-touch support for individuals and small businesses—handled personally, with clarity and precision.
+            Bookkeeping, payroll, sales tax, cleanup work,
+            and practical back-office support.
           </p>
 
           <div class="heroActions">
-            <a class="btn accent" href="#services">Learn more</a>
-            <a class="btn ghost" style="border-color: rgba(255,255,255,.35); color:#fff;" href="#contact">Request a consultation</a>
+
+            <a
+              class="btn outline"
+              href="#owner"
+            >
+              Meet the Owner
+            </a>
+
           </div>
 
-          <div class="heroNote">
-            Chelsea LeCount • EFIN Holder • 8+ years experience
-          </div>
         </div>
+
       </div>
+
     </div>
+
   </section>
+
+
+  <!-- SERVICES -->
 
   <section class="section" id="services">
+
     <div class="wrap">
-      <h2 class="sectionTitle">Services</h2>
-      <p class="sectionLead">
-        A focused set of services designed for clients who want accuracy, organization, and a trusted relationship—not a rushed, volume approach.
-      </p>
+
+      <h2 class="sectionTitle">
+        Services
+      </h2>
+
 
       <div class="grid">
+
+
         <div class="card">
-          <h3>Individual Tax Preparation</h3>
-          <p>Careful filing, clean documentation, and clear communication—handled directly.</p>
+
+          <h3>
+            Bookkeeping, Payroll &amp; Sales Tax
+          </h3>
+
+          <p>
+            Monthly bookkeeping, payroll processing,
+            sales-tax support, employee onboarding,
+            recordkeeping, and practical HR administrative support.
+          </p>
+
         </div>
+
+
         <div class="card">
-          <h3>Small Business Tax Services</h3>
-          <p>Support for business owners who value consistency, compliance, and strategy.</p>
+
+          <h3>
+            Cleanup &amp; Catch-Up
+          </h3>
+
+          <p>
+            Correcting inconsistencies, untangling past activity,
+            and rebuilding clean, usable financial records.
+          </p>
+
         </div>
+
+
         <div class="card">
-          <h3>Bookkeeping & Payroll</h3>
-          <p>Structured monthly support to keep your numbers clean and your year-end easy.</p>
+
+          <h3>
+            Tax Preparation &amp; Compliance
+          </h3>
+
+          <p>
+            Individual and small-business tax preparation
+            with organized records, clear communication,
+            and year-round support.
+          </p>
+
         </div>
+
+
       </div>
+
     </div>
+
   </section>
+
+
+  <!-- OWNER -->
+
+  <section class="section soft" id="owner">
+
+    <div class="wrap">
+
+      <div class="ownerGrid">
+
+
+        <div class="ownerFrame">
+
+          <img
+            class="ownerPhoto"
+            src="assets/chelsea-lecount-headshot.jpg"
+            alt="Chelsea LeCount, owner of LeCount Tax Prep"
+          >
+
+        </div>
+
+
+        <div class="ownerCopy">
+
+          <div class="ownerEyebrow">
+            Meet the Owner
+          </div>
+
+          <h2>
+            Hi, I’m Chelsea LeCount.
+          </h2>
+
+
+          <p>
+            I began my career in public accounting and have spent years
+            working across tax, bookkeeping, payroll, audits, and
+            small-business accounting. Today, I bring that technical
+            experience together with the part of business I enjoy most:
+            creating structure and building systems that make things
+            work better.
+          </p>
+
+
+          <p>
+            I genuinely love taking something that feels scattered,
+            inefficient, or overwhelming and turning it into a process
+            that makes sense. My work goes beyond entering transactions.
+            I help business owners clean up what is not working,
+            strengthen the financial back office, and create reliable
+            systems they can actually use as they grow.
+          </p>
+
+
+          <p>
+            Outside of work, I’m a mom, a beekeeper, and a naturally
+            creative person. Beekeeping appeals to me for many of the
+            same reasons accounting does: healthy systems depend on
+            structure, consistency, attention to detail, and knowing
+            how all the moving pieces work together. I also enjoy
+            building new ideas, working on creative projects, and
+            finding better ways to organize just about anything.
+            I’m continuing my professional education and working toward
+            CPA licensure.
+          </p>
+
+
+          <p>
+            LeCount Tax Prep was built around direct, hands-on support.
+            Clients work with me personally, with an emphasis on
+            accuracy, organization, practical problem-solving, and
+            solutions that fit the way their business actually operates.
+          </p>
+
+
+          <div class="ownerSignature">
+            Chelsea LeCount • Owner, LeCount Tax Prep
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRICING + CONTACT -->
 
   <section class="section" id="pricing">
+
     <div class="wrap">
-      <h2 class="sectionTitle">Pricing</h2>
-      <p class="sectionLead">
-        Because every situation is different, pricing is based on complexity and scope. Most clients start with a brief consultation.
-      </p>
-      <div class="card">
-        <h3>How it works</h3>
-        <p>
-          1) Request a consultation → 2) Quick scope review → 3) Clear quote before work begins.
-        </p>
+
+      <div class="splitSection">
+
+
+        <div class="splitPanel light">
+
+          <h2>
+            Pricing
+          </h2>
+
+          <p>
+            Because every situation is different,
+            pricing is based on complexity and scope.
+            My general rate is
+            <strong>$50 per hour</strong>.
+          </p>
+
+          <p>
+            Rates may be discounted based on
+            engagement size or referrals.
+          </p>
+
+          <p>
+            <strong>How it works:</strong><br>
+            1) Request a consultation →
+            2) Quick scope review →
+            3) Clear quote before work begins.
+          </p>
+
+        </div>
+
+
+        <div class="splitPanel dark" id="contact">
+
+          <h2>
+            Contact
+          </h2>
+
+          <p>
+            Reach out to request a consultation
+            or ask a question.
+          </p>
+
+
+          <div class="contactBlock">
+
+            <br>
+
+            Chelsea M. LeCount
+
+            <br>
+
+            New Orleans, Louisiana
+
+            <br>
+
+            Phone:
+            <a href="tel:+15046030039">
+              504-603-0039
+            </a>
+
+            <br>
+
+            Email:
+            <a href="mailto:Chelsea@LeCountTaxPrep.com">
+              Chelsea@LeCountTaxPrep.com
+            </a>
+
+          </div>
+
+        </div>
+
+
       </div>
+
     </div>
+
   </section>
 
-  <section class="section" id="contact">
+
+  <!-- FORMS & RESOURCES -->
+
+  <section
+    class="section"
+    id="employee-resources"
+  >
+
     <div class="wrap">
-      <h2 class="sectionTitle">Contact</h2>
-      <p class="sectionLead">Reach out to request a consultation or ask a question.</p>
 
-      <div class="grid" style="grid-template-columns: 1fr; max-width: 760px;">
-   <div class="card">
- <h3>LeCount Tax Prep</h3>
-  <p>
-    Chelsea M. LeCount<br />
-    New Orleans, Louisiana<br />
-    Phone: <a class="underline" href="tel:+15044935562">504-493-5562</a><br />
-    Email: <a class="underline" href="mailto:Chelsea@LeCountTaxPrep.com">Chelsea@LeCountTaxPrep.com</a><br />
 
-    <a
-      href="https://docs.google.com/forms/d/e/1FAIpQLSdoZwB_guCEEdKrAPL8QI-O1d-FG0jFRP4F2XbaIQXQIAy8hA/viewform?usp=publish-editor"
-      target="_blank"
-      style="
-        display:inline-block;
-        margin-top:10px;
-        padding:8px 12px;
-        border-radius:8px;
-        background:#ecfdf5;
-        color:#047857;
-        font-weight:700;
-        font-size:14px;
-        text-decoration:none;
-      ">
-      → Contact Me
-    </a>
-  </p>
+      <h2 class="sectionTitle">
+        Forms &amp; Resources
+      </h2>
 
-  <p style="margin-top:12px; color:var(--muted); font-size:12px;">
-    <strong>Confidentiality Notice:</strong> This email may contain privileged tax information intended only for the recipient.
-  </p>
-</div>
-  </div>
-</section>
 
-  <section class="section" id="employee-resources">
-    <div class="wrap">
-      <h2 class="sectionTitle">Forms & Resources</h2>
-    <p class="sectionLead">
-      Use the forms below to submit employment paperwork and payroll requests.
-    </p>
+      <p class="sectionLead">
+        Use the forms below to submit employment paperwork,
+        payroll requests, and secure client documents.
+      </p>
 
-    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-      <div class="card">
-        <h3>Employee Intake Form</h3>
-        <p>
-          Complete this form when you need to submit onboarding information.
-        </p>
-        <p style="margin-top:16px;">
-          <a class="btn accent"
-             href="https://docs.google.com/forms/d/e/1FAIpQLSf7NeisX_Y_CCy91_j0qmGx9-vhS2Kz85RLEB0o7Eiy_0J_YA/viewform?usp=sharing&ouid=111221423617459546304"
-             target="_blank">
+
+      <div class="resourceGrid">
+
+
+        <div class="card">
+
+          <h3>
+            Employee Intake Form
+          </h3>
+
+          <p>
+            Complete this form when you need
+            to submit onboarding information.
+          </p>
+
+          <a
+            class="btn dark resourceBtn"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf7NeisX_Y_CCy91_j0qmGx9-vhS2Kz85RLEB0o7Eiy_0J_YA/viewform?usp=sharing&ouid=111221423617459546304"
+            target="_blank"
+          >
             Open Employee Intake Form
           </a>
-        </p>
-      </div>
 
-      <div class="card">
-        <h3>Time Card Adjustment Request</h3>
-        <p>
-          Submit a request to correct or adjust hours previously reported.
-        </p>
-        <p style="margin-top:16px;">
-          <a class="btn accent"
-             href="https://docs.google.com/forms/d/e/1FAIpQLSegNubxZaYMwnJjaWrkwZczDZk-ajw3lvUTJUDjGKGMErcZnQ/viewform?usp=sharing&ouid=111221423617459546304"
-             target="_blank">
+        </div>
+
+
+        <div class="card">
+
+          <h3>
+            Time Card Adjustment Request
+          </h3>
+
+          <p>
+            Submit a request to correct
+            or adjust hours previously reported.
+          </p>
+
+          <a
+            class="btn dark resourceBtn"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSegNubxZaYMwnJjaWrkwZczDZk-ajw3lvUTJUDjGKGMErcZnQ/viewform?usp=sharing&ouid=111221423617459546304"
+            target="_blank"
+          >
             Open Time Card Adjustment Form
           </a>
-        </p>
-      </div>
-      <div class="card">
-    <h3>Update Direct Deposit Information</h3>
-    <p>
-        Submit this form to request a change to your direct deposit banking information.
-    </p>
-    <p style="margin-top:16px;">
-        <a class="btn accent"
-           href="https://docs.google.com/forms/d/e/1FAIpQLSfr3gp-HKskmDz6w06OwkTthD6uJ8Zjr18AEn0iNQF2M06rKA/viewform?usp=publish-editor"
-           target="_blank">
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>
+            Update Direct Deposit Information
+          </h3>
+
+          <p>
+            Submit this form to request a change
+            to your direct deposit banking information.
+          </p>
+
+          <a
+            class="btn dark resourceBtn"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfr3gp-HKskmDz6w06OwkTthD6uJ8Zjr18AEn0iNQF2M06rKA/viewform?usp=publish-editor"
+            target="_blank"
+          >
             Open Direct Deposit Update Form
-        </a>
-    </p>
-</div>
-      <div class="card">
-  <h3>Secure Client Portal</h3>
-  <p>
-    Upload tax documents, exchange files securely, and communicate through our encrypted client portal.
-  </p>
-  <p style="margin-top:16px;">
-    <a class="btn accent"
-       href="https://www.encyro.com/lecounttaxprep"
-       target="_blank">
-      Open Client Portal
-    </a>
-  </p>
-</div>
+          </a>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>
+            Secure Client Portal
+          </h3>
+
+          <p>
+            Upload tax documents, exchange files securely,
+            and communicate through our encrypted client portal.
+          </p>
+
+          <a
+            class="btn dark resourceBtn"
+            href="https://www.encyro.com/lecounttaxprep"
+            target="_blank"
+          >
+            Open Client Portal
+          </a>
+
+        </div>
+
+
+      </div>
+
     </div>
-  </div>
-  <footer class="footer">
+
+  </section>
+
+
+  <!-- SISTER COMPANY -->
+
+  <section
+    class="section"
+    id="media-marketing"
+  >
+
     <div class="wrap">
-      © <span id="y"></span> LeCount Tax Prep • All rights reserved
+
+      <div class="sisterCard">
+
+
+        <div class="sisterBadge">
+          Sister Company • Coming Soon
+        </div>
+
+
+        <h2>
+          LeCount Media &amp; Marketing
+        </h2>
+
+
+        <p>
+          Creative and strategic support for small businesses,
+          entrepreneurs, organizations, and campaigns that need
+          polished branding, website build support, practical marketing,
+          and systems behind the scenes.
+        </p>
+
+
+        <div class="servicePills">
+
+          <span>
+            Brand Strategy
+          </span>
+
+          <span>
+            Visual Identity
+          </span>
+
+          <span>
+            Website Build
+          </span>
+
+          <span>
+            Social Media
+          </span>
+
+          <span>
+            Marketing &amp; Campaigns
+          </span>
+
+          <span>
+            Creative Direction
+          </span>
+
+          <span>
+            Business Systems
+          </span>
+
+        </div>
+
+
+        <a
+          class="sisterLink"
+          href="https://lecountmedia.com"
+          target="_blank"
+          rel="noopener"
+        >
+          LeCountMedia.com → Coming Soon
+        </a>
+
+
+      </div>
+
     </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <div class="wrap">
+
+      © <span id="y"></span>
+      LeCount Tax Prep • All rights reserved
+
+    </div>
+
   </footer>
+
+
 </main>
 
+
 <script>
-  document.getElementById('y').textContent = new Date().getFullYear();
+
+  document.getElementById("y").textContent =
+    new Date().getFullYear();
+
 </script>
+
 
 </body>
 </html>
