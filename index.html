@@ -4,12 +4,61 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>LeCount Tax Prep | Small Business Accounting & Systems</title>
+  <title>Bookkeeping & Cleanup Services in New Orleans | LeCount Tax Prep</title>
 
   <meta
     name="description"
-    content="Bookkeeping, payroll, sales tax, cleanup, tax preparation, and practical back-office support for small businesses."
+    content="New Orleans bookkeeping and cleanup services for small businesses, including catch-up bookkeeping, QuickBooks cleanup, payroll support, sales tax, and tax preparation from a QuickBooks ProAdvisor."
   />
+
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://lecounttaxprep.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bookkeeping & Cleanup Services in New Orleans | LeCount Tax Prep" />
+  <meta property="og:description" content="Bookkeeping cleanup, catch-up bookkeeping, QuickBooks cleanup, payroll support, sales tax, and tax preparation for small businesses in the New Orleans area." />
+  <meta property="og:url" content="https://lecounttaxprep.com/" />
+  <meta property="og:site_name" content="LeCount Tax Prep" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bookkeeping & Cleanup Services in New Orleans | LeCount Tax Prep" />
+  <meta name="twitter:description" content="Bookkeeping cleanup, catch-up bookkeeping, QuickBooks cleanup, payroll support, sales tax, and tax preparation for small businesses in the New Orleans area." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["ProfessionalService", "AccountingService"],
+    "name": "LeCount Tax Prep",
+    "url": "https://lecounttaxprep.com/",
+    "email": "mailto:Chelsea@LeCountTaxPrep.com",
+    "telephone": "+1-504-603-0039",
+    "areaServed": [
+      {"@type":"City","name":"New Orleans"},
+      {"@type":"AdministrativeArea","name":"Louisiana"}
+    ],
+    "description": "Bookkeeping, catch-up bookkeeping, bookkeeping cleanup, QuickBooks cleanup, payroll support, sales tax support, tax preparation, and practical back-office systems for small businesses.",
+    "knowsAbout": [
+      "Bookkeeping",
+      "Bookkeeping cleanup",
+      "Catch-up bookkeeping",
+      "QuickBooks cleanup",
+      "QuickBooks Online",
+      "Payroll",
+      "Sales tax",
+      "Small business accounting",
+      "Tax preparation"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Chelsea LeCount",
+      "jobTitle": "Owner",
+      "knowsAbout": ["QuickBooks Online", "Bookkeeping", "Payroll", "Tax preparation"]
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/chelsea-lecount-9350903b5"
+    ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -291,7 +340,28 @@
     }
 
     .ownerVisual{
-      padding-top:4px;
+      position:relative;
+      padding:72px 0 28px 54px;
+      isolation:isolate;
+    }
+
+    /* Recognizable chess bishop silhouette behind the portrait */
+    .ownerVisual:before{
+      content:"";
+      position:absolute;
+      left:-70px;
+      bottom:-24px;
+      width:245px;
+      height:325px;
+      z-index:0;
+      background-repeat:no-repeat;
+      background-position:center bottom;
+      background-size:contain;
+      opacity:.11;
+      transform:rotate(-4deg);
+      pointer-events:none;
+      user-select:none;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 320'%3E%3Cg fill='%23102a43'%3E%3Cpath d='M110 12c-18 0-33 15-33 33 0 12 7 23 17 29L80 98l30 34 30-34-14-24c10-6 17-17 17-29 0-18-15-33-33-33zm0 18c8 0 15 7 15 15 0 5-3 10-7 13l-8-14-8 14c-4-3-7-8-7-13 0-8 7-15 15-15z'/%3E%3Cpath d='M110 118 73 160c-7 8-11 19-11 30 0 18 12 33 29 38l-14 30h66l-14-30c17-5 29-20 29-38 0-11-4-22-11-30l-37-42z'/%3E%3Cpath d='M64 244h92l10 20H54z'/%3E%3Cpath d='M48 270h124l14 24H34z'/%3E%3Cpath d='M28 298h164c9 0 16 7 16 16H12c0-9 7-16 16-16z'/%3E%3C/g%3E%3C/svg%3E");
     }
 
     .ownerMobileTitle{
@@ -300,22 +370,30 @@
 
     .ownerFrame{
       position:relative;
+      z-index:1;
       width:100%;
-      aspect-ratio:1/1;
-      padding:14px;
-      border:3px solid var(--navy);
-      border-radius:50%;
+      max-width:315px;
+      aspect-ratio:4/5;
       background:#fff;
-      box-shadow:0 22px 50px rgba(16,42,67,.16);
+      box-shadow:0 22px 48px rgba(16,42,67,.18);
       overflow:visible;
     }
 
+    /* Fine offset frame gives the portrait an editorial, designed feel */
     .ownerFrame:before{
       content:"";
       position:absolute;
-      inset:7px;
-      border:1px solid rgba(16,42,67,.18);
-      border-radius:50%;
+      inset:-14px -14px 14px 14px;
+      border:2px solid rgba(178,149,96,.58);
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    .ownerFrame:after{
+      content:"";
+      position:absolute;
+      inset:0;
+      border:1px solid rgba(16,42,67,.20);
       pointer-events:none;
       z-index:2;
     }
@@ -324,11 +402,9 @@
       display:block;
       width:100%;
       height:100%;
-      aspect-ratio:1/1;
       object-fit:cover;
       object-position:center 24%;
-      border-radius:50%;
-      border:1px solid rgba(16,42,67,.18);
+      border-radius:0;
     }
 
 
@@ -721,7 +797,13 @@
       }
 
       .ownerVisual{
-        padding-top:0;
+        padding:18px 18px 30px 58px;
+      }
+
+      .ownerVisual:before{
+        left:-16px;
+        bottom:-4px;
+        font-size:240px;
       }
 
       .ownerMobileTitle{
@@ -770,8 +852,8 @@
       }
 
       .ownerFrame{
-        width:100%;
-        max-width:430px;
+        width:min(78vw,315px);
+        max-width:315px;
         margin:0 auto;
       }
 
@@ -860,9 +942,11 @@
 
         <a
           class="btn dark"
-          href="#contact"
+          href="https://calendar.app.google/5LnuR8LKWUz7fvSa6"
+          target="_blank"
+          rel="noopener"
         >
-          Get Started
+          Schedule a Consultation
         </a>
 
       </div>
@@ -933,12 +1017,12 @@
         <div class="card">
 
           <h3>
-            Bookkeeping, Payroll &amp; Sales Tax
+            Bookkeeping, Cleanup, Payroll &amp; Sales Tax
           </h3>
 
           <p>
-            Monthly bookkeeping, payroll processing,
-            sales-tax support, employee onboarding,
+            Monthly bookkeeping, QuickBooks cleanup, catch-up bookkeeping,
+            payroll processing, sales-tax support, employee onboarding,
             recordkeeping, and practical HR administrative support.
           </p>
 
@@ -952,8 +1036,9 @@
           </h3>
 
           <p>
-            Correcting inconsistencies, untangling past activity,
-            and rebuilding clean, usable financial records.
+            Correcting inconsistencies, catching up overdue books,
+            untangling past activity, and rebuilding clean, usable
+            financial records in QuickBooks and related systems.
           </p>
 
         </div>
@@ -1017,10 +1102,9 @@
           <p>
             I began my career in public accounting and have spent years
             working across tax, bookkeeping, payroll, audits, and
-            small-business accounting. Today, I bring that technical
-            experience together with the part of business I enjoy most:
-            creating structure and building systems that make things
-            work better.
+            small-business accounting. I’m also a QuickBooks ProAdvisor,
+            with a particular focus on bookkeeping cleanup, catch-up work,
+            and helping business owners get accurate, usable books back in place.
           </p>
 
 
@@ -1028,9 +1112,9 @@
             I genuinely love taking something that feels scattered,
             inefficient, or overwhelming and turning it into a process
             that makes sense. My work goes beyond entering transactions.
-            I help business owners clean up what is not working,
-            strengthen the financial back office, and create reliable
-            systems they can actually use as they grow.
+            I help business owners clean up inconsistent books, catch up
+            overdue bookkeeping, strengthen the financial back office, and
+            create reliable systems they can actually use as they grow.
           </p>
 
 
@@ -1039,8 +1123,7 @@
             I enjoy building new ideas, working on creative projects, and finding better
             ways to organize just about anything. I even designed and built this website
             myself, because apparently “that’s not my area” has never been much of a
-            stopping point for me. Beekeeping is another outlet for that same appreciation
-            for structure and systems. I’m also continuing my professional education and
+            stopping point for me. I’m currently continuing my professional education and
             working toward CPA licensure.
           </p>
 
@@ -1100,6 +1183,16 @@
             2) Quick scope review →
             3) Clear quote before work begins.
           </p>
+
+          <a
+            class="btn dark"
+            href="https://calendar.app.google/5LnuR8LKWUz7fvSa6"
+            target="_blank"
+            rel="noopener"
+            style="margin-top:14px; padding:12px 18px; font-size:13px;"
+          >
+            Schedule a Consultation
+          </a>
 
         </div>
 
