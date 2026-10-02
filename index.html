@@ -11,32 +11,86 @@
     content="New Orleans bookkeeping and cleanup services for small businesses, including catch-up bookkeeping, QuickBooks cleanup, payroll support, sales tax, and tax preparation from a QuickBooks ProAdvisor."
   />
 
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-  <link rel="canonical" href="https://lecounttaxprep.com/" />
+  <meta
+    name="robots"
+    content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+  />
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Bookkeeping & Cleanup Services in New Orleans | LeCount Tax Prep" />
-  <meta property="og:description" content="Bookkeeping cleanup, catch-up bookkeeping, QuickBooks cleanup, payroll support, sales tax, and tax preparation for small businesses in the New Orleans area." />
-  <meta property="og:url" content="https://lecounttaxprep.com/" />
-  <meta property="og:site_name" content="LeCount Tax Prep" />
+  <link
+    rel="canonical"
+    href="https://lecounttaxprep.com/"
+  />
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Bookkeeping & Cleanup Services in New Orleans | LeCount Tax Prep" />
-  <meta name="twitter:description" content="Bookkeeping cleanup, catch-up bookkeeping, QuickBooks cleanup, payroll support, sales tax, and tax preparation for small businesses in the New Orleans area." />
+  <meta
+    property="og:type"
+    content="website"
+  />
+
+  <meta
+    property="og:title"
+    content="Bookkeeping & Cleanup Services in New Orleans | LeCount Tax Prep"
+  />
+
+  <meta
+    property="og:description"
+    content="Bookkeeping cleanup, catch-up bookkeeping, QuickBooks cleanup, payroll support, sales tax, and tax preparation for small businesses in the New Orleans area."
+  />
+
+  <meta
+    property="og:url"
+    content="https://lecounttaxprep.com/"
+  />
+
+  <meta
+    property="og:site_name"
+    content="LeCount Tax Prep"
+  />
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content="Bookkeeping & Cleanup Services in New Orleans | LeCount Tax Prep"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Bookkeeping cleanup, catch-up bookkeeping, QuickBooks cleanup, payroll support, sales tax, and tax preparation for small businesses in the New Orleans area."
+  />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": ["ProfessionalService", "AccountingService"],
-    "name": "LeCount Tax Prep",
-    "url": "https://lecounttaxprep.com/",
-    "email": "mailto:Chelsea@LeCountTaxPrep.com",
-    "telephone": "+1-504-603-0039",
-    "areaServed": [
-      {"@type":"City","name":"New Orleans"},
-      {"@type":"AdministrativeArea","name":"Louisiana"}
+    "@type": [
+      "ProfessionalService",
+      "AccountingService"
     ],
-    "description": "Bookkeeping, catch-up bookkeeping, bookkeeping cleanup, QuickBooks cleanup, payroll support, sales tax support, tax preparation, and practical back-office systems for small businesses.",
+
+    "name": "LeCount Tax Prep",
+
+    "url": "https://lecounttaxprep.com/",
+
+    "email": "mailto:Chelsea@LeCountTaxPrep.com",
+
+    "telephone": "+1-504-603-0039",
+
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "New Orleans"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Louisiana"
+      }
+    ],
+
+    "description":
+      "Bookkeeping, catch-up bookkeeping, bookkeeping cleanup, QuickBooks cleanup, payroll support, sales tax support, tax preparation, and practical back-office systems for small businesses.",
+
     "knowsAbout": [
       "Bookkeeping",
       "Bookkeeping cleanup",
@@ -48,25 +102,40 @@
       "Small business accounting",
       "Tax preparation"
     ],
+
     "founder": {
       "@type": "Person",
       "name": "Chelsea LeCount",
       "jobTitle": "Owner",
-      "knowsAbout": ["QuickBooks Online", "Bookkeeping", "Payroll", "Tax preparation"]
+
+      "knowsAbout": [
+        "QuickBooks Online",
+        "Bookkeeping",
+        "Payroll",
+        "Tax preparation"
+      ]
     },
+
     "sameAs": [
       "https://www.linkedin.com/in/chelsea-lecount-9350903b5"
     ]
   }
   </script>
 
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet"
   >
+
 
   <style>
 
@@ -83,13 +152,16 @@
       --radius:16px;
     }
 
+
     *{
       box-sizing:border-box;
     }
 
+
     html{
       scroll-behavior:smooth;
     }
+
 
     body{
       margin:0;
@@ -99,10 +171,12 @@
       line-height:1.55;
     }
 
+
     a{
       color:inherit;
       text-decoration:none;
     }
+
 
     .wrap{
       max-width:var(--max);
@@ -111,635 +185,1128 @@
     }
 
 
-    /* HEADER */
+
+    /* ==============================
+       HEADER
+    ============================== */
+
 
     .topbar{
       position:sticky;
       top:0;
       z-index:20;
+
       background:rgba(255,255,255,.96);
+
       backdrop-filter:blur(10px);
+
       border-top:4px solid var(--navy);
       border-bottom:1px solid var(--line);
     }
 
+
     .nav{
       min-height:82px;
+
       display:grid;
-      grid-template-columns:auto 1fr auto;
+
+      grid-template-columns:
+        auto
+        1fr
+        auto;
+
       align-items:center;
+
       gap:34px;
     }
+
 
     .brandtext{
       display:flex;
       flex-direction:column;
+
       line-height:1;
-      font-family:Montserrat,Inter,sans-serif;
+
+      font-family:
+        Montserrat,
+        Inter,
+        sans-serif;
     }
+
 
     .brandtext strong{
       color:var(--navy);
+
       font-weight:800;
+
       font-size:30px;
+
       letter-spacing:-.02em;
+
       white-space:nowrap;
     }
+
 
     .brandtext span{
       margin-top:7px;
+
       font-size:10px;
+
       color:#6b7c91;
+
       letter-spacing:.17em;
+
       text-transform:uppercase;
+
       white-space:nowrap;
     }
+
 
     .links{
       display:flex;
+
       justify-content:center;
       align-items:center;
+
       gap:22px;
-      font-family:Montserrat,Inter,sans-serif;
+
+      font-family:
+        Montserrat,
+        Inter,
+        sans-serif;
+
       font-weight:600;
+
       font-size:14px;
+
       color:#263448;
     }
 
+
     .links a{
       white-space:nowrap;
+
       opacity:.9;
     }
 
+
     .links a:hover{
       color:var(--navy);
+
       opacity:1;
     }
 
+
     .btn{
       display:inline-flex;
+
       align-items:center;
       justify-content:center;
+
       border-radius:10px;
-      font-family:Montserrat,Inter,sans-serif;
+
+      font-family:
+        Montserrat,
+        Inter,
+        sans-serif;
+
       font-weight:800;
+
       border:1px solid transparent;
-      transition:transform .1s ease, opacity .15s ease;
+
+      transition:
+        transform .1s ease,
+        opacity .15s ease;
     }
+
 
     .btn:hover{
       transform:translateY(-1px);
     }
 
+
     .btn.dark{
       background:var(--navy);
+
       color:#fff;
     }
+
 
     .btn.outline{
       background:transparent;
+
       color:#fff;
+
       border-color:rgba(255,255,255,.55);
     }
 
+
     .navcta .btn{
       padding:14px 20px;
+
       font-size:14px;
     }
 
 
-    /* HERO */
+
+    /* ==============================
+       HERO
+    ============================== */
+
 
     .hero{
       padding:28px 0 0;
     }
 
+
     .heroCard{
       position:relative;
+
       min-height:320px;
+
       border-radius:var(--radius);
+
       overflow:hidden;
 
       background:
+
         linear-gradient(
           90deg,
           rgba(10,32,52,.94) 0%,
           rgba(16,42,67,.84) 48%,
           rgba(16,42,67,.48) 100%
         ),
+
         url("assets/chess-hero.png");
 
       background-size:115% auto;
+
       background-position:center 24%;
 
-      box-shadow:0 16px 40px rgba(16,42,67,.12);
+      box-shadow:
+        0 16px 40px
+        rgba(16,42,67,.12);
     }
+
 
     .heroInner{
       position:relative;
+
       z-index:1;
+
       min-height:320px;
+
       display:flex;
+
       flex-direction:column;
+
       justify-content:center;
+
       max-width:720px;
+
       padding:44px 50px;
+
       color:#fff;
     }
 
+
     h1{
       margin:0 0 16px;
-      font-family:Montserrat,Inter,sans-serif;
+
+      font-family:
+        Montserrat,
+        Inter,
+        sans-serif;
+
       font-weight:600;
+
       letter-spacing:-.02em;
+
       line-height:1.05;
-      font-size:clamp(40px,4.8vw,64px);
+
+      font-size:
+        clamp(
+          40px,
+          4.8vw,
+          64px
+        );
+
       max-width:680px;
     }
 
+
     .heroSub{
       margin:0 0 24px;
+
       max-width:50ch;
+
       font-size:17px;
-      color:rgba(255,255,255,.9);
+
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .9
+        );
     }
+
 
     .heroActions{
       display:flex;
+
       gap:12px;
+
       flex-wrap:wrap;
     }
 
+
     .heroActions .btn{
       min-height:44px;
+
       padding:10px 16px;
+
       font-size:14px;
     }
 
 
-    /* GENERAL SECTIONS */
+
+    /* ==============================
+       GENERAL SECTIONS
+    ============================== */
+
 
     .section{
       padding:54px 0;
     }
 
+
     .section.soft{
       background:var(--soft);
     }
 
+
     .sectionTitle{
       margin:0 0 20px;
-      font-family:Montserrat,Inter,sans-serif;
+
+      font-family:
+        Montserrat,
+        Inter,
+        sans-serif;
+
       font-weight:800;
+
       color:var(--navy);
+
       font-size:30px;
+
       letter-spacing:-.01em;
     }
 
+
     .sectionLead{
       margin:0 0 24px;
+
       color:var(--muted);
+
       max-width:70ch;
     }
 
+
     .grid{
       display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
+
+      grid-template-columns:
+        repeat(
+          3,
+          minmax(0,1fr)
+        );
+
       gap:16px;
     }
 
+
     .card{
-      border:1px solid var(--line);
+      border:
+        1px solid
+        var(--line);
+
       border-radius:16px;
+
       padding:22px;
+
       background:#fff;
-      box-shadow:0 8px 24px rgba(16,42,67,.04);
+
+      box-shadow:
+        0 8px 24px
+        rgba(16,42,67,.04);
     }
+
 
     .card h3{
       margin:0 0 10px;
-      font-family:Montserrat,Inter,sans-serif;
+
+      font-family:
+        Montserrat,
+        Inter,
+        sans-serif;
+
       font-weight:800;
+
       color:var(--navy);
+
       font-size:16px;
     }
 
+
     .card p{
       margin:0;
+
       color:var(--muted);
     }
 
 
-    /* OWNER */
+
+    /* ==============================
+       OWNER
+    ============================== */
+
 
     .ownerGrid{
       display:grid;
-      grid-template-columns:minmax(260px,390px) minmax(0,1fr);
+
+      grid-template-columns:
+        minmax(260px,390px)
+        minmax(0,1fr);
+
       gap:48px;
+
       align-items:start;
     }
 
+
     .ownerVisual{
       position:relative;
-      padding:72px 0 28px 54px;
+
+      padding:
+        72px
+        0
+        28px
+        54px;
+
       isolation:isolate;
     }
 
-    /* Recognizable chess bishop silhouette behind the portrait */
+
+
+    /* Bishop behind the portrait */
+
     .ownerVisual:before{
       content:"";
+
       position:absolute;
-      left:-70px;
-      bottom:-24px;
-      width:245px;
-      height:325px;
+
+      left:-120px;
+
+      bottom:-70px;
+
+      width:285px;
+
+      height:375px;
+
       z-index:0;
+
       background-repeat:no-repeat;
-      background-position:center bottom;
+
+      background-position:
+        center
+        bottom;
+
       background-size:contain;
+
       opacity:.11;
-      transform:rotate(-4deg);
+
+      transform:
+        rotate(-4deg);
+
       pointer-events:none;
+
       user-select:none;
-      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 320'%3E%3Cg fill='%23102a43'%3E%3Cpath d='M110 12c-18 0-33 15-33 33 0 12 7 23 17 29L80 98l30 34 30-34-14-24c10-6 17-17 17-29 0-18-15-33-33-33zm0 18c8 0 15 7 15 15 0 5-3 10-7 13l-8-14-8 14c-4-3-7-8-7-13 0-8 7-15 15-15z'/%3E%3Cpath d='M110 118 73 160c-7 8-11 19-11 30 0 18 12 33 29 38l-14 30h66l-14-30c17-5 29-20 29-38 0-11-4-22-11-30l-37-42z'/%3E%3Cpath d='M64 244h92l10 20H54z'/%3E%3Cpath d='M48 270h124l14 24H34z'/%3E%3Cpath d='M28 298h164c9 0 16 7 16 16H12c0-9 7-16 16-16z'/%3E%3C/g%3E%3C/svg%3E");
+
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 320'%3E%3Cg fill='%23102a43'%3E%3Cpath d='M110 12c-18 0-33 15-33 33 0 12 7 23 17 29L80 98l30 34 30-34-14-24c10-6 17-17 17-29 0-18-15-33-33-33zm0 18c8 0 15 7 15 15 0 5-3 10-7 13l-8-14-8 14c-4-3-7-8-7-13 0-8 7-15 15-15z'/%3E%3Cpath d='M110 118 73 160c-7 8-11 19-11 30 0 18 12 33 29 38l-14 30h66l-14-30c17-5 29-20 29-38 0-11-4-22-11-30l-37-42z'/%3E%3Cpath d='M64 244h92l10 20H54z'/%3E%3Cpath d='M48 270h124l14 24H34z'/%3E%3Cpath d='M28 298h164c9 0 16 7 16 16H12c0-9 7-16 16-16z'/%3E%3C/g%3E%3C/svg%3E");
     }
+
 
     .ownerMobileTitle{
       display:none;
     }
 
+
     .ownerFrame{
       position:relative;
+
       z-index:1;
+
       width:100%;
+
       max-width:315px;
+
       aspect-ratio:4/5;
+
       background:#fff;
-      box-shadow:0 22px 48px rgba(16,42,67,.18);
+
+      box-shadow:
+        0 22px 48px
+        rgba(16,42,67,.18);
+
       overflow:visible;
     }
 
-    /* Fine offset frame gives the portrait an editorial, designed feel */
+
+
+    /* Offset gold frame */
+
     .ownerFrame:before{
       content:"";
+
       position:absolute;
-      inset:-14px -14px 14px 14px;
-      border:2px solid rgba(178,149,96,.58);
+
+      inset:
+        -14px
+        -14px
+        14px
+        14px;
+
+      border:
+        2px solid
+        rgba(178,149,96,.58);
+
       pointer-events:none;
+
       z-index:-1;
     }
 
+
+
+    /* Fine border around photo */
+
     .ownerFrame:after{
       content:"";
+
       position:absolute;
+
       inset:0;
-      border:1px solid rgba(16,42,67,.20);
+
+      border:
+        1px solid
+        rgba(16,42,67,.20);
+
       pointer-events:none;
+
       z-index:2;
     }
 
+
     .ownerPhoto{
       display:block;
+
       width:100%;
+
       height:100%;
+
       object-fit:cover;
-      object-position:center 24%;
+
+      object-position:
+        center
+        24%;
+
       border-radius:0;
     }
 
 
     .ownerEyebrow{
       display:flex;
+
       align-items:center;
+
       gap:10px;
+
       margin:0 0 10px;
+
       color:var(--navy);
-      font-family:Montserrat,Inter,sans-serif;
+
+      font-family:
+        Montserrat,
+        Inter,
+        sans-serif;
+
       font-size:11px;
+
       font-weight:800;
+
       letter-spacing:.16em;
+
       text-transform:uppercase;
+
       line-height:1;
     }
 
+
     .ownerEyebrow:before{
       content:"";
+
       width:34px;
+
       height:2px;
+
       border-radius:999px;
+
       background:var(--navy);
+
       opacity:.85;
     }
 
+
     .ownerCopy h2{
       margin:0 0 16px;
+
       color:var(--navy);
-      font-family:Montserrat,Inter,sans-serif;
-      font-size:clamp(30px,4vw,46px);
+
+      font-family:
+        Montserrat,
+        Inter,
+        sans-serif;
+
+      font-size:
+        clamp(
+          30px,
+          4vw,
+          46px
+        );
+
       line-height:1.08;
     }
 
+
     .ownerCopy p{
       margin:0 0 16px;
+
       color:var(--muted);
+
       font-size:17px;
     }
 
+
     .ownerSignature{
       margin-top:22px;
-      font-family:Montserrat,Inter,sans-serif;
+
+      font-family:
+        Montserrat,
+        Inter,
+        sans-serif;
+
       font-weight:800;
+
       color:var(--navy);
     }
 
 
-    /* PRICING + CONTACT */
+
+    /* ==============================
+       PRICING + CONTACT
+    ============================== */
+
 
     #pricing{
       padding-bottom:72px;
-      border-bottom:1px solid rgba(16,42,67,.10);
+
+      border-bottom:
+        1px solid
+        rgba(16,42,67,.10);
+
       background:#fff;
     }
+
 
     .splitSection{
       display:grid;
-      grid-template-columns:1.15fr .85fr;
+
+      grid-template-columns:
+        1.15fr
+        .85fr;
+
       gap:0;
+
       max-width:980px;
+
       margin:0 auto;
+
       border-radius:0;
+
       overflow:hidden;
-      box-shadow:0 12px 30px rgba(16,42,67,.08);
+
+      box-shadow:
+        0 12px 30px
+        rgba(16,42,67,.08);
     }
+
 
     .splitPanel{
       position:relative;
+
       overflow:hidden;
+
       border-radius:0;
+
       padding:32px 30px;
+
       border:0;
+
       box-shadow:none;
+
       min-height:300px;
     }
 
+
     .splitPanel.light{
       background:#fff;
-      border:1px solid var(--line);
+
+      border:
+        1px solid
+        var(--line);
+
       border-right:0;
     }
 
+
     .splitPanel.dark{
-      background:linear-gradient(
-        135deg,
-        var(--navy) 0%,
-        var(--navy2) 100%
-      );
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy) 0%,
+          var(--navy2) 100%
+        );
+
       color:#fff;
-      border:1px solid var(--navy);
+
+      border:
+        1px solid
+        var(--navy);
     }
+
 
     .splitPanel h2{
       margin:0 0 12px;
-      font-family:Montserrat,Inter,sans-serif;
+
+      font-family:
+        Montserrat,
+        Inter,
+        sans-serif;
+
       font-size:28px;
+
       color:var(--navy);
+
       position:relative;
+
       z-index:1;
     }
+
 
     .splitPanel.dark h2{
       color:#fff;
     }
 
+
     .splitPanel p{
       margin:0 0 10px;
+
       color:var(--muted);
+
       position:relative;
+
       z-index:1;
+
       max-width:36rem;
     }
 
+
     .splitPanel.dark p{
-      color:rgba(255,255,255,.88);
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .88
+        );
+
       margin-bottom:18px;
+
       max-width:24rem;
     }
 
+
     .contactBlock{
       margin-top:10px;
+
       line-height:1.8;
+
       position:relative;
+
       z-index:1;
+
       max-width:30rem;
     }
 
+
     .contactBlock a{
       text-decoration:underline;
+
       text-underline-offset:2px;
     }
 
 
     .contactActions{
       display:flex;
+
       align-items:center;
+
       gap:12px;
+
       margin-top:20px;
     }
 
+
     .contactIconBtn{
       display:inline-flex;
+
       align-items:center;
+
       justify-content:center;
+
       width:36px;
+
       height:36px;
+
       border-radius:50%;
-      border:1px solid rgba(255,255,255,.55);
+
+      border:
+        1px solid
+        rgba(255,255,255,.55);
+
       background:#fff;
+
       color:var(--navy);
+
       text-decoration:none !important;
-      transition:transform .1s ease, opacity .15s ease;
+
+      transition:
+        transform .1s ease,
+        opacity .15s ease;
     }
 
+
     .contactIconBtn:hover{
-      transform:translateY(-1px);
+      transform:
+        translateY(-1px);
+
       opacity:.94;
     }
 
+
     .contactIconBtn.linkedin{
       background:transparent;
+
       color:#fff;
     }
 
+
     .contactIconBtn svg{
       width:18px;
+
       height:18px;
+
       display:block;
+
       fill:currentColor;
     }
 
-    .linkedinSiteBtn{
-      margin-top:16px;
-      padding:11px 16px;
-      font-size:13px;
-      gap:8px;
-    }
-
-    .linkedinSiteBtn .linkedinMark{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:20px;
-      height:20px;
-      border-radius:3px;
-      background:#fff;
-      color:var(--navy);
-      font-family:Arial,Helvetica,sans-serif;
-      font-size:12px;
-      font-weight:800;
-      line-height:1;
-    }
 
 
-    /* FORMS & RESOURCES */
+    /* ==============================
+       FORMS & RESOURCES
+    ============================== */
+
 
     #employee-resources{
       padding-top:72px;
+
       background:#f6f8fb;
     }
 
+
     .resourceGrid{
       display:grid;
-      grid-template-columns:repeat(4,minmax(0,1fr));
+
+      grid-template-columns:
+        repeat(
+          4,
+          minmax(0,1fr)
+        );
+
       gap:16px;
     }
 
+
     .resourceGrid .card{
       display:flex;
+
       flex-direction:column;
+
       min-width:0;
     }
+
 
     .resourceGrid .card p:first-of-type{
       flex:1;
     }
 
+
     .resourceBtn{
       width:100%;
+
       min-height:54px;
+
       padding:13px 14px;
+
       white-space:normal;
+
       text-align:center;
+
       line-height:1.25;
+
       font-size:14px;
+
       margin-top:16px;
     }
 
 
-    /* SISTER COMPANY */
+
+    /* ==============================
+       SISTER COMPANY
+    ============================== */
+
 
     .sisterCard{
       position:relative;
+
       overflow:hidden;
+
       border-radius:20px;
-      padding:clamp(28px,4vw,42px);
+
+      padding:
+        clamp(
+          28px,
+          4vw,
+          42px
+        );
 
       background:
+
         linear-gradient(
           90deg,
           rgba(10,32,52,.93) 0%,
           rgba(16,42,67,.86) 48%,
           rgba(16,42,67,.58) 100%
         ),
-        url("https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&fm=jpg&q=85&w=2200");
+
+        url(
+          "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&fm=jpg&q=85&w=2200"
+        );
 
       background-size:cover;
-      background-position:center 42%;
 
-      box-shadow:0 18px 42px rgba(16,42,67,.14);
+      background-position:
+        center
+        42%;
+
+      box-shadow:
+        0 18px 42px
+        rgba(16,42,67,.14);
+
       color:#fff;
     }
 
+
     .sisterCard:before{
       content:"";
+
       position:absolute;
+
       inset:0;
+
       background:
         linear-gradient(
           135deg,
           rgba(255,255,255,.03),
           rgba(255,255,255,0) 45%
         );
+
       pointer-events:none;
     }
 
+
     .sisterCard > *{
       position:relative;
+
       z-index:1;
     }
 
+
     .sisterBadge{
       display:inline-block;
+
       margin-bottom:14px;
+
       padding:6px 10px;
-      border:1px solid rgba(255,255,255,.35);
+
+      border:
+        1px solid
+        rgba(255,255,255,.35);
+
       border-radius:999px;
-      font-family:Montserrat,Inter,sans-serif;
+
+      font-family:
+        Montserrat,
+        Inter,
+        sans-serif;
+
       font-size:11px;
+
       font-weight:800;
+
       letter-spacing:.14em;
+
       text-transform:uppercase;
     }
 
+
     .sisterCard h2{
       margin:0 0 12px;
-      font-family:Montserrat,Inter,sans-serif;
-      font-size:clamp(28px,4vw,42px);
+
+      font-family:
+        Montserrat,
+        Inter,
+        sans-serif;
+
+      font-size:
+        clamp(
+          28px,
+          4vw,
+          42px
+        );
     }
+
 
     .sisterCard p{
       margin:0 0 18px;
+
       max-width:72ch;
-      color:rgba(255,255,255,.88);
+
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .88
+        );
     }
+
 
     .servicePills{
       display:flex;
+
       flex-wrap:wrap;
+
       gap:9px;
+
       margin:20px 0 22px;
     }
 
+
     .servicePills span{
       padding:7px 10px;
+
       border-radius:999px;
-      background:rgba(255,255,255,.10);
-      border:1px solid rgba(255,255,255,.20);
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          .10
+        );
+
+      border:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          .20
+        );
+
       font-size:13px;
+
       font-weight:600;
     }
 
+
     .sisterLink{
       display:inline-flex;
+
       padding:13px 18px;
+
       border-radius:10px;
+
       background:#fff;
+
       color:var(--navy);
-      font-family:Montserrat,Inter,sans-serif;
+
+      font-family:
+        Montserrat,
+        Inter,
+        sans-serif;
+
       font-weight:800;
     }
 
 
-    /* FOOTER */
+
+    /* ==============================
+       FOOTER
+    ============================== */
+
 
     .footer{
-      border-top:1px solid var(--line);
+      border-top:
+        1px solid
+        var(--line);
+
       padding:22px 0;
+
       color:var(--muted);
+
       font-size:13px;
     }
 
 
-    /* RESPONSIVE */
+
+    /* ==============================
+       TABLET
+    ============================== */
+
 
     @media (max-width:1080px){
 
@@ -747,43 +1314,64 @@
         gap:20px;
       }
 
+
       .brandtext strong{
         font-size:25px;
       }
 
+
       .links{
         gap:13px;
+
         font-size:11px;
       }
 
+
       .navcta .btn{
         padding:12px 15px;
+
         font-size:12px;
       }
 
+
       .resourceGrid{
-        grid-template-columns:repeat(2,minmax(0,1fr));
+        grid-template-columns:
+          repeat(
+            2,
+            minmax(0,1fr)
+          );
       }
+
     }
+
+
+
+    /* ==============================
+       MOBILE
+    ============================== */
+
 
     @media (max-width:860px){
 
-      /* Tighter mobile section spacing so divider lines don't create
-         large empty bands between stacked sections. */
+
       .section{
         padding:34px 0;
       }
+
 
       #pricing{
         padding-bottom:36px;
       }
 
+
       #employee-resources{
         padding-top:36px;
       }
 
+
       #media-marketing{
         padding-top:36px;
+
         padding-bottom:36px;
       }
 
@@ -792,111 +1380,231 @@
         padding-top:38px;
       }
 
+
+
+      /* Hide desktop owner title */
+
       .ownerEyebrow{
         display:none;
       }
 
+
+
+      /* Center entire owner image area */
+
       .ownerVisual{
-        padding:18px 18px 30px 58px;
+        width:100%;
+
+        padding:
+          20px
+          0
+          42px;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
       }
 
+
+
+      /* Mobile bishop position */
+
       .ownerVisual:before{
-        left:-16px;
-        bottom:-4px;
-        font-size:240px;
+        left:
+          calc(
+            50% - 205px
+          );
+
+        bottom:-10px;
+
+        width:190px;
+
+        height:250px;
+
+        transform:
+          rotate(-4deg);
       }
+
+
+
+      /* Mobile owner label */
 
       .ownerMobileTitle{
         display:flex;
+
         align-items:center;
+
         justify-content:center;
+
         gap:10px;
+
         margin:0 0 14px;
+
         color:var(--navy);
-        font-family:Montserrat,Inter,sans-serif;
+
+        font-family:
+          Montserrat,
+          Inter,
+          sans-serif;
+
         font-size:11px;
+
         font-weight:800;
+
         letter-spacing:.15em;
+
         text-transform:uppercase;
+
         line-height:1;
       }
+
 
       .ownerMobileTitle:before,
       .ownerMobileTitle:after{
         content:"";
+
         width:32px;
+
         height:1px;
-        background:rgba(16,42,67,.35);
+
+        background:
+          rgba(
+            16,
+            42,
+            67,
+            .35
+          );
       }
+
+
+
+      /* Mobile navigation */
 
       .nav{
         display:flex;
+
         justify-content:space-between;
       }
+
 
       .links{
         display:none;
       }
 
+
       .brandtext strong{
         font-size:24px;
       }
+
+
+
+      /* Cards */
 
       .grid{
         grid-template-columns:1fr;
       }
 
+
+
+      /* Owner layout */
+
       .ownerGrid{
         grid-template-columns:1fr;
+
         gap:22px;
       }
 
+
       .ownerFrame{
-        width:min(78vw,315px);
+        width:
+          min(
+            82vw,
+            315px
+          );
+
         max-width:315px;
+
         margin:0 auto;
       }
 
+
+      .ownerCopy{
+        width:100%;
+      }
+
+
       .ownerCopy h2{
         margin-top:4px;
+
+        text-align:center;
       }
+
+
+      .ownerSignature{
+        text-align:center;
+      }
+
+
+
+      /* Resources */
 
       .resourceGrid{
         grid-template-columns:1fr;
       }
 
+
+
+      /* Hero */
+
       .heroInner{
         padding:36px 28px;
       }
+
 
       .heroActions .btn{
         width:auto;
       }
 
+
+
+      /* Pricing + contact */
+
       .splitSection{
         grid-template-columns:1fr;
       }
 
+
       .splitPanel{
         padding:24px 22px;
+
         min-height:auto;
       }
 
+
       .splitPanel.light{
-        border-right:1px solid var(--line);
+        border-right:
+          1px solid
+          var(--line);
+
         border-bottom:0;
       }
+
 
       .contactActions{
         gap:9px;
       }
+
     }
 
   </style>
+
 </head>
 
 
 <body>
+
 
 <header class="topbar">
 
@@ -904,11 +1612,17 @@
 
     <div class="nav">
 
-      <a href="#top" aria-label="LeCount Tax Prep Home">
+
+      <a
+        href="#top"
+        aria-label="LeCount Tax Prep Home"
+      >
 
         <div class="brandtext">
 
-          <strong>LECOUNT TAX PREP</strong>
+          <strong>
+            LECOUNT TAX PREP
+          </strong>
 
           <span>
             BOUTIQUE TAX &amp; ACCOUNTING
@@ -919,23 +1633,38 @@
       </a>
 
 
-      <nav class="links" aria-label="Primary">
 
-        <a href="#home">HOME</a>
+      <nav
+        class="links"
+        aria-label="Primary"
+      >
 
-        <a href="#services">SERVICES</a>
+        <a href="#home">
+          HOME
+        </a>
 
-        <a href="#owner">ABOUT</a>
+        <a href="#services">
+          SERVICES
+        </a>
 
-        <a href="#pricing">PRICING</a>
+        <a href="#owner">
+          ABOUT
+        </a>
 
-        <a href="#contact">CONTACT</a>
+        <a href="#pricing">
+          PRICING
+        </a>
+
+        <a href="#contact">
+          CONTACT
+        </a>
 
         <a href="#employee-resources">
           FORMS &amp; RESOURCES
         </a>
 
       </nav>
+
 
 
       <div class="navcta">
@@ -951,6 +1680,7 @@
 
       </div>
 
+
     </div>
 
   </div>
@@ -958,12 +1688,20 @@
 </header>
 
 
+
 <main id="top">
 
 
-  <!-- HERO -->
 
-  <section class="hero" id="home">
+  <!-- ============================
+       HERO
+  ============================= -->
+
+
+  <section
+    class="hero"
+    id="home"
+  >
 
     <div class="wrap">
 
@@ -971,14 +1709,17 @@
 
         <div class="heroInner">
 
+
           <h1>
             Accounting Support for Small Businesses.
           </h1>
+
 
           <p class="heroSub">
             Bookkeeping, payroll, sales tax, cleanup work,
             and practical back-office support.
           </p>
+
 
           <div class="heroActions">
 
@@ -991,6 +1732,7 @@
 
           </div>
 
+
         </div>
 
       </div>
@@ -1000,18 +1742,28 @@
   </section>
 
 
-  <!-- SERVICES -->
 
-  <section class="section" id="services">
+  <!-- ============================
+       SERVICES
+  ============================= -->
+
+
+  <section
+    class="section"
+    id="services"
+  >
 
     <div class="wrap">
+
 
       <h2 class="sectionTitle">
         Services
       </h2>
 
 
+
       <div class="grid">
+
 
 
         <div class="card">
@@ -1029,6 +1781,7 @@
         </div>
 
 
+
         <div class="card">
 
           <h3>
@@ -1042,6 +1795,7 @@
           </p>
 
         </div>
+
 
 
         <div class="card">
@@ -1061,42 +1815,64 @@
 
       </div>
 
+
     </div>
 
   </section>
 
 
-  <!-- OWNER -->
 
-  <section class="section soft" id="owner">
+  <!-- ============================
+       OWNER
+  ============================= -->
+
+
+  <section
+    class="section soft"
+    id="owner"
+  >
 
     <div class="wrap">
 
       <div class="ownerGrid">
 
 
+
         <div class="ownerVisual">
-          <div class="ownerMobileTitle">Meet the Owner</div>
+
+
+          <div class="ownerMobileTitle">
+            Meet the Owner
+          </div>
+
 
           <div class="ownerFrame">
 
-          <img
-            class="ownerPhoto"
-            src="assets/chelsea-lecount-headshot.jpg"
-            alt="Chelsea LeCount, owner of LeCount Tax Prep"
-          >
+            <img
+              class="ownerPhoto"
+              src="assets/chelsea-lecount-headshot.jpg"
+              alt="Chelsea LeCount, owner of LeCount Tax Prep"
+            >
 
           </div>
+
+
         </div>
+
 
 
         <div class="ownerCopy">
 
-          <div class="ownerEyebrow">Meet the Owner</div>
+
+          <div class="ownerEyebrow">
+            Meet the Owner
+          </div>
+
 
           <h2>
             Hi, I’m Chelsea LeCount.
           </h2>
+
 
 
           <p>
@@ -1106,6 +1882,7 @@
             with a particular focus on bookkeeping cleanup, catch-up work,
             and helping business owners get accurate, usable books back in place.
           </p>
+
 
 
           <p>
@@ -1118,14 +1895,16 @@
           </p>
 
 
+
           <p>
             Outside of work, I’m a mom, a beekeeper, and a naturally creative person.
             I enjoy building new ideas, working on creative projects, and finding better
             ways to organize just about anything. I even designed and built this website
             myself, because apparently “that’s not my area” has never been much of a
-            stopping point for me. I’m currently continuing my professional education and
+            stopping point for me. I’m also continuing my professional education and
             working toward CPA licensure.
           </p>
+
 
 
           <p>
@@ -1136,12 +1915,14 @@
           </p>
 
 
+
           <div class="ownerSignature">
             Chelsea LeCount • Owner, LeCount Tax Prep
           </div>
 
 
         </div>
+
 
       </div>
 
@@ -1150,20 +1931,31 @@
   </section>
 
 
-  <!-- PRICING + CONTACT -->
 
-  <section class="section" id="pricing">
+  <!-- ============================
+       PRICING + CONTACT
+  ============================= -->
+
+
+  <section
+    class="section"
+    id="pricing"
+  >
 
     <div class="wrap">
+
 
       <div class="splitSection">
 
 
+
         <div class="splitPanel light">
+
 
           <h2>
             Pricing
           </h2>
+
 
           <p>
             Because every situation is different,
@@ -1172,36 +1964,59 @@
             <strong>$50 per hour</strong>.
           </p>
 
+
           <p>
             Rates may be discounted based on
             engagement size or referrals.
           </p>
 
+
           <p>
-            <strong>How it works:</strong><br>
+
+            <strong>
+              How it works:
+            </strong>
+
+            <br>
+
             1) Request a consultation →
+
             2) Quick scope review →
+
             3) Clear quote before work begins.
+
           </p>
+
 
           <a
             class="btn dark"
             href="https://calendar.app.google/5LnuR8LKWUz7fvSa6"
             target="_blank"
             rel="noopener"
-            style="margin-top:14px; padding:12px 18px; font-size:13px;"
+            style="
+              margin-top:14px;
+              padding:12px 18px;
+              font-size:13px;
+            "
           >
             Schedule a Consultation
           </a>
 
+
         </div>
 
 
-        <div class="splitPanel dark" id="contact">
+
+        <div
+          class="splitPanel dark"
+          id="contact"
+        >
+
 
           <h2>
             Contact
           </h2>
+
 
           <p>
             Reach out to request a consultation
@@ -1209,15 +2024,22 @@
           </p>
 
 
+
           <div class="contactBlock">
 
             Chelsea M. LeCount
+
             <br>
+
             New Orleans, Louisiana
 
           </div>
 
+
+
           <div class="contactActions">
+
+
 
             <a
               class="contactIconBtn"
@@ -1225,10 +2047,21 @@
               aria-label="Call Chelsea LeCount"
               title="Call"
             >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/>
+
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+
+                <path
+                  d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"
+                />
+
               </svg>
+
             </a>
+
+
 
             <a
               class="contactIconBtn"
@@ -1236,10 +2069,21 @@
               aria-label="Email Chelsea LeCount"
               title="Email"
             >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+
+                <path
+                  d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+                />
+
               </svg>
+
             </a>
+
+
 
             <a
               class="contactIconBtn linkedin"
@@ -1249,24 +2093,40 @@
               aria-label="Chelsea LeCount on LinkedIn"
               title="LinkedIn"
             >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M6.94 8.5H3.56V19h3.38V8.5zM5.25 3A1.96 1.96 0 1 0 5.25 6.92 1.96 1.96 0 0 0 5.25 3zM20.44 13.02c0-3.17-1.69-4.65-3.95-4.65-1.82 0-2.64 1-3.1 1.7V8.5h-3.38V19h3.38v-5.2c0-1.37.26-2.7 1.96-2.7 1.67 0 1.69 1.56 1.69 2.79V19h3.38l.02-5.98z"/>
+
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+
+                <path
+                  d="M6.94 8.5H3.56V19h3.38V8.5zM5.25 3A1.96 1.96 0 1 0 5.25 6.92 1.96 1.96 0 0 0 5.25 3zM20.44 13.02c0-3.17-1.69-4.65-3.95-4.65-1.82 0-2.64 1-3.1 1.7V8.5h-3.38V19h3.38v-5.2c0-1.37.26-2.7 1.96-2.7 1.67 0 1.69 1.56 1.69 2.79V19h3.38l.02-5.98z"
+                />
+
               </svg>
+
             </a>
 
+
           </div>
+
 
         </div>
 
 
       </div>
 
+
     </div>
 
   </section>
 
 
-  <!-- FORMS & RESOURCES -->
+
+  <!-- ============================
+       FORMS & RESOURCES
+  ============================= -->
+
 
   <section
     class="section"
@@ -1287,7 +2147,9 @@
       </p>
 
 
+
       <div class="resourceGrid">
+
 
 
         <div class="card">
@@ -1312,6 +2174,7 @@
         </div>
 
 
+
         <div class="card">
 
           <h3>
@@ -1334,6 +2197,7 @@
         </div>
 
 
+
         <div class="card">
 
           <h3>
@@ -1354,6 +2218,7 @@
           </a>
 
         </div>
+
 
 
         <div class="card">
@@ -1380,12 +2245,17 @@
 
       </div>
 
+
     </div>
 
   </section>
 
 
-  <!-- SISTER COMPANY -->
+
+  <!-- ============================
+       SISTER COMPANY
+  ============================= -->
+
 
   <section
     class="section"
@@ -1393,6 +2263,7 @@
   >
 
     <div class="wrap">
+
 
       <div class="sisterCard">
 
@@ -1415,37 +2286,47 @@
         </p>
 
 
+
         <div class="servicePills">
+
 
           <span>
             Brand Strategy
           </span>
 
+
           <span>
             Visual Identity
           </span>
+
 
           <span>
             Website Build
           </span>
 
+
           <span>
             Social Media
           </span>
+
 
           <span>
             Marketing &amp; Campaigns
           </span>
 
+
           <span>
             Creative Direction
           </span>
+
 
           <span>
             Business Systems
           </span>
 
+
         </div>
+
 
 
         <a
@@ -1460,38 +2341,49 @@
 
       </div>
 
+
     </div>
 
   </section>
 
 
-  <!-- FOOTER -->
 
- <footer class="footer">
+  <!-- ============================
+       FOOTER
+  ============================= -->
 
-  <div class="wrap">
 
-    © <span id="y"></span>
-    LeCount Tax Prep • All rights reserved
+  <footer class="footer">
 
-    <br>
+    <div class="wrap">
 
-    Website designed &amp; built by
-    <a
-      href="https://lecountmedia.com"
-      target="_blank"
-      rel="noopener"
-      style="font-weight:600; color:var(--navy);"
-    >
-      LeCount Media &amp; Marketing
-    </a>
+      © <span id="y"></span>
 
-  </div>
+      LeCount Tax Prep • All rights reserved
 
-</footer>
+      <br>
+
+      Website designed &amp; built by
+
+      <a
+        href="https://lecountmedia.com"
+        target="_blank"
+        rel="noopener"
+        style="
+          font-weight:600;
+          color:var(--navy);
+        "
+      >
+        LeCount Media &amp; Marketing
+      </a>
+
+    </div>
+
+  </footer>
 
 
 </main>
+
 
 
 <script>
